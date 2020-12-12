@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>HTML5요소</title>
+    </head>
+    <body>
+        <a href="웹공부.html"><p>처음으로</p></a>
+        <p><h1>HTML5요소</h1></p>
+        <hr>
+        
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>문서를 구성하는 기본 요소</h2>
+                    <li>html - 문서의 루트 요소로, 모든 HTML요소는 루트 요소 내에 포함되어야 한다.</li>
+                    <li>head - 문서의 메타데이터 집합 요소로, 문서제목, 스타일 파일 연결, 자바스크립트 삽입을 위한 요소들을 포함할 수 있다.</li>
+                    <li>body - 문서의 본문 요소로, 문서 내에서 한 번만 사용할 수 있다.</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>문서의 메타데이터 요소</h2>
+                    <li>title - 문서의 제목으로 텍스트만 포함할 수 있다.</li>
+                    <li>meta - 다양한 문서 정보를 나타낼 때 사용</li>
+                    <li>style - CSS를 문서 내에 직접 기술할 때 사용</li>
+                    <li>link - 문서에 외부 문서를 연결할 때 사용</li>
+                    <li>base - 문서의 상대 경로에 대한 기본 URL을 정의할 때 사용</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>스크립팅 관련 요소</h2>
+                    <li>script - 문서에 자바스크립트 파일을 삽입하거나 자바스크립트 코드를 기술할 때 사용</li>
+                    <li>noscript - 자바스크립트를 지원하지 않을 경우, 대신 제공할 폴백 콘텐츠를 정의할 때 사용</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>섹션 관련 요소</h2>
+                    <li>section - 장이나 절 등으로 구성할 수 있는 콘텐츠 섹션을 정의할 때 사용</li>
+                    <li>nav - 문서의 주요 내비게이션을 정의할 때 사용</li>
+                    <li>article - RSS피드로 재배포할 가치가 있는 독립된 콘텐츠를 정의할 때 사용. 이때 반드시 RSS로 재배포할 것인지의 여부는 중요X</li>   
+                    <li>aside - 본문 컨텐츠와 연관성이 적은 콘텐츠를 정의할 때 사용</li>   
+                    <li>header - 페이지나 섹션 등의 헤더를 정의할 때 사용</li>   
+                    <li>footer - 페이지나 섹션 등의 푸터를 정의할 때 사용</li>   
+                    <li>address - 연락처 정보를 정의할 때 사용</li>   
+                    <li>h1~h6 - 컨텐츠 블록의 제목을 정의할 때 사용</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border =2>
+            <td>
+                <ul>
+                    <h2>그룹 관련 요소</h2>
+                    <li>div - 콘텐츠 블록의 시맨틱한 의미를 가지고 있지는 않지만, 디자인이나 개발 이슈로 인해 컨텐츠 블록을 그룹화 하고자 할 떄 사용</li>
+                    <li>main - 문서의 주요 컨텐츠 영역을 정의할 때 사용하며, 문서에는 하나만 존재</li>
+                    <li>p - 단락 컨텐츠를 정의할 때 사용</li>
+                    <li>ul - 비순서형 목록을 마크업할 때 사용</li>
+                    <li>ol - 순서형 목록을 마크업할 때 사용합니다</li>
+                    <li>li - 순서형 또는 비순서형 목록의 목록 항목을 정의</li>
+                    <li>dl - 정의형 목록을 마크업하고자 할 때 사용</li>
+                    <li>dt - 정의형 목록의 용어 제목을 의미</li>
+                    <li>dd - 정의형 목록의 용어 설명을 의미</li>
+                    <li>figure - 이미지, 오디오, 비디오, 표 등을 포함</li>
+                    <li>figcaption - figure 요소에 포함된 콘텐츠에 대한 캡션을 정의할 때 사용</li>
+                    <li>blockquote - 인용 컨텐츠 블록을 정의할 때 사용</li>
+                    <li>pre - 공백이나 줄바꿈 등의 입력 형식 그대로 화면에 렌더링하고자 할 때 사용</li>
+                    <li>hr - 단락의 주제를 구분</li>
+                </ul>    
+            </td>
+        </table>
+        <hr>
+        <table border =2>
+            <td>
+                <ul>
+                    <h2>텍스트 레벨의 시맨틱 요소</h2>
+                    <li>a - <a href = 'http:\naver.com'>하이퍼링크를 지정</a></li>
+                    <li>em - <em>텍스트를 강조</em></li>
+                    <li>strong - <strong>특별히 중요한 컨텐츠의 의미를 부여</strong></li>
+                    <li>i - <i>HTML5에서 의미가 변한 요소로, 단순히 이탤릭체로 나타내기 위한 요소가 아니라<br>
+                            분위기를 전환하는 의미의 텍스트를 나타내며,
+                            전문용어, 관용구, 생각 또는 선박 이름 등에 사용</i></li>
+                    <li>b - <b>텍스트를 볼드체로 표현하여 다른 컨텐츠와 구분하고자 할 때 사용</b></li>
+                    <li>mark - <mark>텍스트를 하이라이트로 지정하고자 할 때 사용</mark></li>
+                    <li>small - <small>저작권 정보 등과 같이 작은 크기의 텍스트 컨텐츠에 사용</small></li>
+                    <li>abbr - <abbr>축약어를 정의할 때 사용</abbr></li>
+                    <li>cite - <cite>결과물의 인용 및 참조를 정의할 때 사용</cite></li>
+                    <li>q - <q>인라인 인용구를 정의할 때 사용</q></li>
+                    <li>time - <time>기계적으로 이해하거나 처리할 수 있는 날짜 및 시간 정보를 정의할 때 사용</time></li>
+                    <li>data - <data>기계적으로 이해하거나 처리할 수 있는 날짜 및 시간 정보를 정의할 때 사용</data></li>
+                    <li>code - <code>소스 코드를 정의할 때 사용</code></li>
+                    <li>var - <var>프로그램에서의 변수 , 식별자 등의 의미를 정의할 때 사용</var></li>
+                    <li>samp - <samp>시스템의 상태 메시지를 정의할 때 사용</samp></li>
+                    <li>kbd - <kbd>키보드 입력 값 등의 의미를 정의할 때 사용</kbd></li>
+                    <li>sup - <sup>윗첨자를 정의할 때 사용</sup></li>
+                    <li>sub - <sub>아랫첨자를 정의할 때 사용</sub></li>
+                    <li>s - <s>텍스트에 취소선을 나타내고자 할 때 사용</s></li>
+                    <li>u - <u>텍스트에 밑줄을 나타내고자 할 떄 사용</u></li>
+                    <li>dfn - <dfn>정의형 목록의 용어를 의미</dfn></li>
+                    <li>ryby - <ruby>루비 요소를 삽입할 때 사용</ruby></li>
+                    <li>rp - 루비 요소에서 루비 괄호를 의미</li>
+                    <li>rt - <rt>루비 요소에서 루비 텍스트를 의미</rt></li>
+                    <li>bdi - <bdi>문단 내 일부 텍스트의 방향을 지정할 때 사용</bdi></li>
+                    <li>bdo - <bdo>텍스트의 방향(왼쪽에서 오른쪽, 오른쪽에서 왼쪽)을 지정할 때 사용(</bdo></li>
+                    <li>span - <span>안라인 텍스트를 그룹화할 때 사용</span></li>
+                    <li>br - 줄바꿈</li>
+                    <li>wbr - <wbr>특정 단어 단위로 줄바꿈</li>
+                </ul>    
+            </td>
+        </table>
+        <hr>
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>수정 및 편집 요소</h2>
+                    <li>ins - <ins>삽입된 컨텐츠를 마크업할 때 사용</ins></li>
+                    <li>del - <del>삭제된 컨텐츠를 마크업</del></li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>포함 컨텐츠 요소</h2>
+                    <li>img - 이미지를 삽입</li>
+                    <li>iframe - 인라인 프레임을 삽입</li>
+                    <li>embed - 플러그인으로 실행할 외부 파일을 삽입</li>
+                    <li>object - 플러그인으로 실행할 외부 파일을 삽입</li>
+                    <li>param - object요소의 파라미터를 지정할 때 사용</li>
+                    <li>video - 비디오 컨텐츠를 삽입할 때 사용</li>
+                    <li>audio - 오디오 컨텐츠를 삽입할 때 사용</li>
+                    <li>source - 비디오 및 오디오의 폴백 컨텐츠를 삽입할 때 사용</li>
+                    <li>track - 비디오 및 오디오의 자막이나 메타데이터를 삽입할 때 사용</li>
+                    <li>canvas - 동적인 비트맵 이미지를 삽입</li>
+                    <li>svg - 벡터 기반의 이미지를 삽입</li>
+                    <li>map - 이미지 맵을 정의할 때 사용</li>
+                    <li>area - 이미지 맵에서 링크 영역을 지정할 때 사용</li>
+                    <li>math - 수학공식을 삽입할 때 사용</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border=2>
+            <td>
+                <ul>
+                    <h2>표 관련 요소</h2>
+                    <li>table - 테이블을 삽입</li>
+                    <li>caption - 테이블의 캡션</li>
+                    <li>colgroup - 테이블의 그룹 열을 정의</li>
+                    <li>col - 테이블의 열을 정의</li>
+                    <li>thead - 테이블의 제목 행을 정의</li>
+                    <li>tbody - 테이블의 본문 행을 정의</li>
+                    <li>tfoot - 테이블의 푸터 행을 정의</li>
+                    <li>tr - 테이블의 행 정의</li>
+                    <li>th - 테이블의 제목 셀 정의</li>
+                    <li>td - 테이블의 내용 셀 정의</li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border=2> 
+            <td>
+                <ul>
+                    <h2>폼 관련 요소</h2>
+                    <li>form - 폼 서식이 포함될 영역을 마크업</li>
+                    <li>fieldset - 서로 연관이 있는 폼 서식을 그룹화할 때 사용</li>
+                    <li>legend - fieldset요소로 그룹화한 폼의 목적을 명시할 때 사용</li>
+                    <li>label - 폼 서식의 레이블을 정의</li>
+                    <li>input - 한 줄 입력 상자, 라디오 버튼, 체크 박스 등 다양한 폼 서식을 마트업할 때 사용
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;HTML5에서 새로운 input요소의 속성이 다수 추가</li>
+                    <li>button - 전송, 취소 등 버튼 서식을 삽입할 때 사용</li>
+                    <li>select - 리스트나 목록 상자로 된 서식을 삽입할 때 사용</li>
+                    <li>optgroup - 리스트나 목록 상자 서식의 항목 그룹을 정의할 때 사용</li>
+                    <li>option - 리스트나 목록 상자 서식의 항목을 정의</li>
+                    <li>datalist - input요소에 대해 미리 정의된 옵션 목록을 지정할 때 사용, input요소의 <q>자동완성</q>기능으로 사용</li>
+                    <li>textarea - <textarea>여러 줄 상자를 삽입할 때 사용</textarea></li>
+                    <li>keygen - 보안 키씽을 제공할 때 사용</li>
+                    <li>output - 계산 결과 값을 출력하기 위한 폼 서식을 삽입하고자 할 때 사용</li>
+                    <li>progress - 작업의 진행 상황을 표현하고자 할때 사용<progress></li>
+                    <li>meter - 한정된 값을 표현 <meter></meter></li>
+                </ul>
+            </td>
+        </table>
+        <hr>
+        <table border = 2>
+            <td>
+                <ul>
+                    <h2>인터랙티브 요소</h2>
+                    <li>details <details>- 사용자의 선택에 따라 나타내거나 숨길수 있는 영역을 정의</details></li>
+                    <li>summary - details 요소의 자식 요소로 나타내거나 숨길 세부 사항을 정의<summary></summary></li>
+                    <li>dialog - 사용자의 입력이나 응답을 요구하는 팝업 등을 마크업 6</li>
+                </ul>
+            </td>
+        </table>
+    </body>
+
+</html>
