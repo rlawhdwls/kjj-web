@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>8.수정및편집,포함요소</title>
+    </head>
+    <body>
+        <p><a href="웹공부.html">처음으로</a></p>
+        <p><h1>수정및 편집</h1></p>
+        <hr>
+        <p>
+            <h2>추가<mark>ins</mark></h2>
+            <h4>
+                ins 요소는 추가로 삽입된 컨텐츠를 의미한다. 해당 컨텐츠가 문서에 추가되었음을 표현할때 사용한다.
+                고유 속성으로 cite와 datetime 속성을 가지며, cite 속성은 해당 컨텐츠를 추가하는 이유나 근거가 되는 URL을 명시할 수 있다.
+                datetime 속성을 사용하면 컨텐츠를 추가한 날짜 및 시간을 지정할 수 있다.
+                <br><br>
+                <ins cite="http://lists.w3.org/Archives/Public/public-html/2013Apr/0005.html" datetime="2013-04-03T10:49:28+09:00">
+                <p>그러나 &lt;hgroup&gt; 요소는 현재 HTML5 사양에서 삭제된 상태입니다.</p>
+                </ins>
+            </h4>
+        </p>
+        <hr>
+        <p>
+            <h2>삭제<mark>del</mark></h2>
+            <h4>
+                del 요소는 삭제된 컨텐츠를 의미하며, 해당 컨텐츠가 문서에서 삭제되었음을 표현할때 사용한다.
+                <br>고유 속성으로 cite와 datetime 속성을 가지며 cite 속성은 해당 컨텐츠를 삭제하는 이유나 근거가 되는 URL을 명시한다.
+                <br>datetime 속성을 사용하면 컨텐츠를 삭제한 날짜 및 시간을 지정할 수 있다.
+            </h4>
+        </p>
+        <hr>
+        <p><h1>포함 요소</h1></p>
+        <hr>
+        <p>
+            <h2>이미지<mark>img</mark></h2>
+            <h4>
+                이미지 컨텐츠를 삽입하고자 할 때 사용하는 요소로, 이미지 컨텐츠의 경로는 필수 속성인 src 속성에 명시한다.
+                <br>이때 이미지 형식 이외에 pdf파일이나 svg파일도 지정할 수 있다.
+                <br>scr 속성 이외에 img 요소에서 중요한 속성으로는 alt 속성을 들 수 있다.
+                <br>alt 속성은 대체 텍스트의 의미로, 웹 접근성의 관점에서 이미지가 표시되지 않거나 이미지를 볼 수 없는 환경에서 alt속성만으로도 이미지의
+                <br>내용을 사용자가 이해할 수 있도록 명확하게 제공해야 한다. 또한 alt 속성은 문법상 필수 속성이므로 생략하면 안된다.
+                <br>
+                <img src="img/피치.jpg" alt="피치" width="300" height="400">
+               </h4>
+        </p>
+        <hr>
+        <p>
+            <h2>인라인 프레임<mark>iframe</mark></h2>
+            <h4>
+                HTML5에서 유일하게 폐지되지 않은 프레임 요소이다. src 속성을 사용하면 별도의 HTML 문서를 삽입할 수 있다.
+                <br>HTML5에는 src속성 이외에 HTML 마크업 코드 자체를 포함할 수 있는 srcdoc 속성이 추가되었다.
+                <br>만약 srcdoc 속성과 src 속성을 함계 사용할 경우 srcdoc 속성이 우선한다. 이때 srcdoc 속성을 지원하지 못하는 웹 브라우저에서는
+                <br> src 속성이 동작한다. 또한 새롭게 추가된 sandbox 속성의 경우에는 프레임에 포함할 컨텐츠에 제약을 걸 수 있으며 , seamless 속성은 프레임 영역의 테두리와 스크롤 막대가 렌더링되지 못하게 할 수 있다. 
+                <br> 그러나 아직까지 srcdoc 속성과 sandbox, seamless 속성을 지원하는 웹 브라우저는 없다.
+                <br><br>
+                <iframe src="웹공부.html" srcdoc="<p>프레임 안에 직접 HTML 마크업을 지정할 수 있다.<br> srcdoc과 src를 같이 쓴경우</p>"></iframe>
+                <iframe src="웹공부.html" ></iframe>
+
+            </h4>
+        </p>
+        <hr>
+        <p>
+            <h2>객체 삽입<mark>embed</mark></h2>
+            <h4>
+                플러그인 관련 컨텐츠를 삽입할 때 사용하는 요소로, HTML5에서 정식 사양에 포함된 요소이다.
+                <br>embed 요소는 빈 요소이기 때문에 종료 태그를 기술하면 안된다. src, type, width, height 속성 이외의 독자적인 속성은 네임 스페이스를 사용하지 않으면 인정되지 않는다.
+                <br><br>
+                <embed src="img/라이언.gif"  width="300" height="200">
+
+            </h4>
+        </p>
+        <hr>
+        <p>
+            <h2>객체 삽입<mark>object, param</mark></h2>
+            <h4>
+                <ol>
+                    object
+                    <li>이미지, 플래시, 동영상, 비디오 등 이미지 컨텐츠나 플러그인 컨텐츠를 삽입할 때 사용한다.                
+                    </li>
+                    <li> 플러그인 컨텐츠 지정은 data 속성에, MIME 타입은 type 속성에 지정한다.</li>
+                    <li>지정한 컨텐츠의 URL에서 컨텐츠를 가지고 오지 못하는 경우 또는 해당 컨텐츠를 지원하지 못하는 환경(예: 플래시)이 존재하는 경우에는 object 요소의 시작 태그와 종료 태그 사이에 폴백(fallback)컨텐츠를 제공할 수 있다.</li>
+                </ol>
+                <ol>
+                    param
+                    <li>플러그인의 기본 값으로 사용할 파라미터를 정의한다.</li>
+                    
+                </ol>
+                <object type="application/x-shockwave-flash" width="300" height="200">
+                    <param name="movie" value="img/라이언.gif">
+                    <param name="quality" value="high">
+                    <!--폴백(fallback)컨텐츠-->
+                    <p>2개의 배너가 있다.</p>
+                    <ul>
+                        <li><a href="http://www.nia.or.kr">
+                            <img src="img/피치.jpg" alt="라이언" width="300" height="200"></a>
+                        </li>
+                        
+                        <li><a href="http://www.wah.or.kr">
+                            <img src="img/피치.jpg" alt="라이언 " width="300" height="200"></a>
+                        </li>
+                        
+                    </ul>
+                </object>
+            </h4>
+        </p>
+    </body>
+</html>
