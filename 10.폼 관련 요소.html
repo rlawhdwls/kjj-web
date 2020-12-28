@@ -136,9 +136,9 @@
             <br>그러나 많은 신규 기능이 아직 모든 웹 브라우저에서 지원되고 있지 않으므로 사용시 웹 브라우저에서 해당 기능을 제공하는지 확인해야 한다.
             <br><br> input 요소는 type 속성 값에 따라 폼 서식의 종류가 결정된다. 
             
-            <table border="2" bordercolor="blue">
+            <table border="2" bordercolor="blue" width="70%" >
                 <tr>
-                    <th>input 속성명</th>
+                    <th width="15%">input type 속성명</th>
                     <th>설명</th>
                     <th >결과</th>
                 </tr>
@@ -326,7 +326,175 @@
                 <td><input type="button" value="실행"></td>
 
             </tr>
+            <tr>
+                <td>type = "image"</td>
+                <td>submit타입과 마찬가지로 전송 버튼을 나타낸다. submit 타입과 다른 점은 버튼에 사용할 이미지를 지정할 수있다는 것이다.
+                    <br>버튼 이미지 경로는 src속성으로 지정하며, alt 속성을 사용하면 해당 버튼 이미지의 대체 텍스트를 지정할 수 있다.
+                    <br>image타입에서는 src 속성과 alt속성이 필수 속성입니다.
+                </td>
+                <td><input type="image" src="img/피치.jpg" alt="검색" height="100" width="100"></td>
+
+            </tr>
+           
             </table>
+
+            <br><br>
+
+            <table border="3" bordercolor="blue" width="70%">
+                <tr>
+                    <th width="15%">input 속성</th>
+                    <th>설명   </th>
+                    <th>결과</th>
+                </tr>
+                <tr>
+                    <td>autocomplete 속성</td>
+                    <td>자동 완성 기능을 사용할 것인지를 결정하는 속성으로  on과 off값을 지정할 수 있다.
+                        <br>on값을 지정한 경우 이전에 입력한 데이터를 웹 브라우저에서 입력 후보 값으로 제공한다.
+                    </td>
+                    <td><input type="text" autocomplete="on" id="id" name="name"></td>
+
+
+                </tr>
+                <tr>
+                    <td>list 속성</td>
+                    <td>웹 개발자가 직접 입력 후보 값을 제공하는 기능으로, autocomplete 속성과 비슷하다.
+                        이때 입력 후보 값은 datalist 요소를 사용하여 마크업한다.
+                    </td>
+                    <td>
+                        <input type="text" list="visitePath">
+                        <datalist id="visitePath">
+                            <option value="직접검색"></option>
+                            <option value="온라인 광고"></option>
+                            <option value="지인 추천"></option>
+                        </datalist>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>readonly 속성</td>
+                    <td>읽기 전용으로 지정하기 위해 사용하는 논리 속성이다. 해당 서식을 readonly로 지정하면 사용자가 값을 변경할 수 없다.</td>
+                    <td><input type="url" readonly value="http://www.naver.com"></td>
+                </tr>
+                <tr>
+                    <td>size 속성</td>
+                    <td>화면에 보이는 폼 서식의 크기를 지정하는 속성이다. 이때 웹 브라우저에 따라 전각 글자 크기와 반각 글자 크기 중
+                        어느 것을 기준으로 하느냐에 따라 폼 서식의 크기가 달라질 수 있다. 이러한 이유로 폼 서식의 너비를 정확하게 지정하고자 한다면 CSS를 이용하는것이 좋다.
+                    </td>
+                    <td>
+                        <input type="text" size="10">
+                    </td>
+                </tr>
+                <tr>   
+                    <td>required 속성</td>
+                    <td>해당 폼 서식이 필수 속성인지 아닌지를 나타내는 논리 속성이다. required 속성을 지정한 폼 서식에 값을 입력하지 않은 상태로
+                        서버로 데이터를 전송할 경우, 에러 메시지가 웹 브라우저 화면에 출력된다.
+                    </td>
+                    <td><input type="text" required >
+                    <input type="submit" value="전송"></td>
+
+                </tr>
+                <tr>
+                    <td>placeholder 속성</td>
+                    <td>사용자에게 해당 폼 서식에 어떤 값을 입력해야 하는지를 알리기 위한 힌트로 사용된다.
+                        이때 placeholder 속성에 입력한 값은 해당 폼 서식에 포커스가 있을 때 새로운 값을 입력하면 사라진다.
+                    </td>
+                    <td><input type="text" placeholder="에)ididid"></td>
+                </tr>
+                <tr>
+                    <td>pattern 속성</td>
+                    <td>폼 서식에 입력하는 입력 값의 정규 표현식을 의미한다. 정규 포현식으로 입력 값의 혀식을 제한할 수 있으며,
+                        이때는 title 속성을 사용하여 정규 표현식에 대한 설명을 함께 제공하는 것이 좋다.
+                    </td>
+                    <td><input type="text" pattern="\d{3}\-\d{4}" title="우편번호는 000-000 형식으로 입력해 주세요.">
+                        <input type="submit" value="전송">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>multiple 속성</td>
+                    <td>논리 속성으로 2개 이상의 값을 지정할 때 사용한다. 새로운 email타입과 file타입에 사용할 수 잇다.</td>
+                    <td><input type="file" multiple id="asdf" name="asdf"></td>
+                </tr>
+                <tr>
+                    <td>maxlength 속성</td>
+                    <td>해당 폼 서식에 입력할 수 있는 최대 글자 수를 지정할 때 사용한다. maxlengh 속성은 한글과 영문을 구별하지 않고 각각 한 문자로 계산한다.</td>
+                    <td><input type="password" maxlength="8"></td>
+                </tr>
+                <tr>
+                    <td>autofocus 속성</td>
+                    <td>웹 페이지가 로딩되자마자 바로 폼 서식으로 포커스가 이동하도록 하는 논리 속성이다.</td>
+                    <td><input type="text" autofocus id="asdf" name="asdf"></td>
+                </tr>
+                <tr>
+                    <td>step 속성</td>
+                    <td>폼 서식에 지정할 수 있는 값의 단위이다. 예를 들어 number 타입에 step="5"0,5,10---형태로 값이 입력된다.
+                        step값은 input 요소의 type 값에 따라 단위가 달라진다.
+                    </td>
+                    <td><input type="number" step="5"></td>
+                </tr>
+                <tr>
+                    <td>max, min 속성</td>
+                    <td>입력 최대값 max, 입력 최소값 min </td>
+                    <td><input type="number" min="5" max="50"></td>
+                </tr>        
+                <tr>
+                    <td>disabled 속성</td>
+                    <td>논리 속성으로, 해당 폼 서식을 사용할 수 없음을 의미한다.</td>
+                    <td><input type="text" disabled></td>
+                </tr>    
+                <tr>
+                    <td>name 속성</td>
+                    <td>폼 서식의 이름을 의미하며, 폼 데이터를 서버로 전송할 때 해당 데이터를 가리키기 위한 이름으로 사용한다.</td>
+                    <td><input type="text" id="text" name="text"></td>
+                </tr>    
+                <tr>
+                    <td>form 속성</td>
+                    <td>input 요소가 나타내는 폼 서식을 지정한 form 요소와 연결할 때 사용한다. 
+                        기존 HTML4.01이나 XHTML1.0에서 모든 폼 서식은 form요소 안에 마크업해야한 했다. 
+                        그러나 HTML5에서는 form 속성의 추가로 인해 폼 서식을 form 요소안에 마트업하지 않고도 연결하는 것이 가능해졌다.
+                    </td>
+                    <td>
+                        <form accept-charset="utf-8" action="login.php" method="post" id="login">
+                            <p>
+                                <label for="userid">아이디</label>
+                                <input type="text" id="userid" name="userid">
+                            </p>
+                            <p>
+                                <label for="userpw">비밀번호</label>
+                                <input type="password" id="userpw" name="userpw">
+                            </p>
+                        </form>
+                        <input type="submit" value="로그인" form="login">
+                    </td>
+                </tr>
+            </table>
+            <br><hr>
+            
+            <div style="width: 70%; ">
+                <h2>버튼<mark>button</mark></h2>
+                <h4 width="70%">
+                    버튼 서식을 삽입할 때 사용한다. button 요소에 type 속성을 지정하지 않으면 해당 버튼이 전송 버튼이 된다. 
+                    button 요소의 type 속성에 지정할 수 있는 값은 submit, reset, button 등이며, input 요소의 submit, reset, button과 기능이 동일하다.
+                    <br><br>
+                    <form action="join.php" method="post" name="memberjoin">
+                        <p>
+                            <p>
+                                <label for="useremail">아이디</label>
+                                <input type="email" id="useremail" name="useremail">
+                            </p>
+                            <p>
+                                <label for="userpw">비밀번호</label>
+                                <input type="password" id="userpw" name="userpw">
+                            </p>
+                            <div class="btnarea">
+                                <button type="submit">가입</button>
+                                <button type="reset">취소</button>
+                            </div>
+                        </form>
+                    </form>
+                </h4>
+            </div>
+                
             
 
         </p>
