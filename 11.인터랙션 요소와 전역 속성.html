@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>11.인터랙션 요소와 전역 속성</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <p><a href="웹공부.html">처음으로</a></p>
+    <h1>11.인터랙션 요소와 전역 속성</h1>
+    <hr>
+    <div style="width: 70%;">
+        <h2>상세설명 <mark>details, summary</mark></h2>
+        <h4>
+            details 요소는 추가 정보를 사용자에게 제공하고자 할 때 사용한다. details 요소는 summary 요소와 함께 사용하여
+            정보의 세부 사항을 마크업할 수 있습니다. 세부 사항은 논리 속성인 open 속성을 사용하여 처음부터 보이게 하거나 사용자의 선택에 의해 보여지도록 할 수 있다.
+            기존에는 이러한 처리를 모두 자바스크립트에 의존했지만, HTML5에 추가된 details 요소를 사용하면 자바 스크립트 없이도 이러한 구현이 가능하다.
+            <br><br>           
+            <section>
+                <h1>&lt;details&gt;, &lt;summary&gt; 예시</h1>
+                <details >
+                    <summary>
+                        HTML5의 상세설명 보기
+                    </summary>
+                    <p>
+                        HTML 5는 차세대 웹 표준으로서 Microsoft, Mozilla, Apple, Google, Opera 등 모든 웹 브라우저 벤더가 참여하고 있는 산업 표준입니다.이 표준안은 시맨틱 마크업을 위한 다수의 엘리먼트 추가와 함께 강력해진 웹폼 기능, 플러그 인에 의존하지 않고 동영상 및 오디오 등을 처리할 수 있는 기술과 함께 API 들을 포함하고 있습니다.
+                    </p>
+                </details>
+                <details >
+                    <summary>
+                        HTML5의 상세설명 보기
+                    </summary>
+                    <p>
+                        HTML 5는 차세대 웹 표준으로서 Microsoft, Mozilla, Apple, Google, Opera 등 모든 웹 브라우저 벤더가 참여하고 있는 산업 표준입니다.이 표준안은 시맨틱 마크업을 위한 다수의 엘리먼트 추가와 함께 강력해진 웹폼 기능, 플러그 인에 의존하지 않고 동영상 및 오디오 등을 처리할 수 있는 기술과 함께 API 들을 포함하고 있습니다.
+                    </p>
+                </details>
+            </section>
+        </h4>
+    </div>
+    <hr>
+    <div style="width: 70%;">
+        <h2>대화상자 <mark>dialog</mark></h2>
+        <h4>
+            사용자의 입력이나 응답을 요구하는 인터페이스로 웹 사이트에 팝업 등을 나타낸다.
+            <br><br>           
+            <dialog id="popup">
+                <p class="chattitle">해당 서비스는 로그인 후 이용할 수 있어</p>
+                <button id="ok">확인</button>    
+            </dialog>            
+        </h4>
+    </div>
+    <hr>
+    <div style="width: 70%;">
+        <h2>전역속성</h2>
+        <details>
+            <summary>전역속성 설명</summary>
+            <p>
+                <h4>
+                    HTML5의 전역속성(Global Attributes)이란, 모든(HTML) 요소에서 사용할 수 있는 속성을 의미한다.
+                    HTML5에서는 기존에 제공되던 전용 속성 이외에 accesskey, contenteditable, draggable, hidden, spellcheck, data-* 속성등이 새롭게 추가되었다.
+                </h4>
+            </p>
+        </details>
+        <table border="3" bordercolor="blue">
+            <tr>
+                <th>전역속성</th>
+                <th>값</th>
+                <th>의미</th>
+                <th>사용(예)</th>
+            </tr>
+            <tr>
+                <td>accesskey</td>
+                <td>문자</td>
+                <td>키보드 단축키를 지정</td>
+                <td>accesskey="s"</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>문자열</td>
+                <td>요소에 이름정의(중복된 class명 사용가능)</td>
+                <td>class="note"</td>
+            </tr>
+            <tr>
+                <td>contenteditable</td>
+                <td>논리속성</td>
+                <td>사용자가 컨텐츠를 수정할 수 있는지를 지정</td>
+                <td>contenteditable</td>
+            </tr>
+            <tr>
+                <td>data-*</td>
+                <td>문자열</td>
+                <td>사용자 정의 속성을 추가</td>
+                <td>data-customer="customer1004"</td>
+            </tr>
+            <tr>
+                <td>dir</td>
+                <td>ltr, rtl</td>
+                <td>문자열의 방향 지정</td>
+                <td>dir="rtl"</td>
+            </tr>
+            <tr>
+                <td>draggable</td>
+                <td>true, false, auto</td>
+                <td>사용자가 컨텐츠를 드래그할 수 있는지를 지정</td>
+                <td>draggable="true"</td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td>논리 속성</td>
+                <td>컨텐츠를 숨길 때 사용</td>
+                <td>hidden</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>문자열</td>
+                <td>요소에 이름 정의(중복된 id명 사용 불가)</td>
+                <td>id="gnb"</td>
+            </tr>
+            <tr>
+                <td>spellcheck</td>
+                <td>true, false</td>
+                <td>스펠링 체크 기능의 적용 여부를 지정할 때 사용</td>
+                <td>spellcheck="true"</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>문자열</td>
+                <td>특정 요소에 인라인 스타일을 지정할 때 사용</td>
+                <td>style="color:#000;"</td>
+            </tr>
+            <tr>
+                <td>tabindex</td>
+                <td>숫자</td>
+                <td>탭 키로 이동 시 이동 순서를 지정할 때 사용</td>
+                <td>tabindex="1"</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>문자열</td>
+                <td>컨텐츠에 대체 설명을 지정할 때 사용</td>
+                <td>title="자세한 설명은 하단의 내용을 참조하세요"</td>
+            </tr>
+        </table>
+       
+
+    </div>
+
+</body>
+</html>

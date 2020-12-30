@@ -24,16 +24,16 @@
             main{
                 width: 85%;
                 float: right;
-                height: 2000px;
+                height: 700px;
                 background-color: white;
 
             }
             nav{
                 width: 15%;
                 float: left;
-                height: 2000px;
+                height: 700px;
                 background-color: silver;
-            }            
+            }      
             a:link{
                 color: black;
                 text-decoration: none;
@@ -46,15 +46,21 @@
                 color:blue;
                 text-decoration: underline;
             }
-            .youtube{
+            button{
+                color: red;
+                background-color: gold;
+                font-size: 20px;
+                height: 50px;
+                width: 100px;
+                border-color: white ;
+                position: fixed;
+                right: 15px;
+                bottom: 15px;
+            }
+            ol{
+                margin-left:100px;
                 margin-top: 100px;
-                margin-left: 100px;
-               
-            }
-            #title{
-                font-size: 2em;
-                font-weight: bold;
-            }
+            }  
             
         </style>
     </head>
@@ -63,6 +69,7 @@
         <header>
             <div>Web공부</div>
         </header>
+        <button onclick="window.location.href='웹공부.html'" >홈으로</button>    
 
         <nav>
             <ul>
@@ -71,19 +78,13 @@
             </ul>
         </nav>        
      
-        <main> 
-            <div class="youtube">
-                <p id="title">생활 코딩 강의</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="youtube">
-                <p id="title">나동빈 강의</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hke9FKluXow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-            </div>
-            <div class="youtube">
-                <p id="title">공부중인 책</p>
-                <input type="image" onclick="window.location.href='https://www.jeumedia.com/shop/webguide/'"  src="img/웹표준핵심가이드북.jpg" width="260" height="400" >
-            </div>
+        <main>           
+            <ol>            
+                <h1>CSS목차</h1>
+                <li><a href="12.CSS규칙.html"> CSS규칙</a></li>
+                <li><a href="13.CSS속성.html"> CSS속성</a></li>
+
+            </ol>
         </main>
     </body>
 </html>

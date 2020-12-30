@@ -389,8 +389,13 @@
                     <td>해당 폼 서식이 필수 속성인지 아닌지를 나타내는 논리 속성이다. required 속성을 지정한 폼 서식에 값을 입력하지 않은 상태로
                         서버로 데이터를 전송할 경우, 에러 메시지가 웹 브라우저 화면에 출력된다.
                     </td>
-                    <td><input type="text" required >
-                    <input type="submit" value="전송"></td>
+                    <td>
+                        <form action="join.php" method="POST" name="required">
+                            <input type="text" required="required" >
+                            <input type="submit" value="전송">
+                        </form>
+                        
+                    </td>
 
                 </tr>
                 <tr>
@@ -494,7 +499,141 @@
                     </form>
                 </h4>
             </div>
-                
+            <hr>
+            <div style="width: 70%;">
+                <h2>목록서식<mark>select, optqroup, option</mark></h2>
+                <h4>select 요소는 항목을 선택할 수 있는 폼 서식을 마크업할 때 사용한다. select 요소에서 지원하는 size 속성은 한번에 표시할 항목의 수를 의미하며,
+                    mutiple 속성은 다중 선택을 허용할 것인지의 여부를 결정하는 논리 속성이다.
+                    optgroup 요소는 select 요소 안에서 사용할 수 있는 그룹 요소로, 각 항목을 의미하는 option 요소를 그룹화하여 지정할 때 사용한다.
+                    optgroup 요소의 경우, label 속성을 사용하여 해당 그룹의 역할을 이해할 수 있도록 제공할 수 있다.
+                    <br><br>
+                    <form action="join.php" method="post" name="food">
+                        <label for="메뉴선택"><font color="blue">메뉴선택</font></label>
+                        <select id="메뉴선택">
+                            <optgroup label="한식">
+                                <option value="불고기">불고기</option>
+                                <option value="김치찌개">김치찌개</option>
+                                <option value="된장찌개">된장찌개</option>
+                            </optgroup>
+                            <optgroup label="중식">
+                                <option value="짜장면">짜장면</option>
+                                <option value="짬뽕">짬뽕</option>
+                                <option value="탕수육">탕수육</option>
+                            </optgroup>
+                        </select>
+                    </form>
+                    
+                </h4>
+            </div>
+            <hr>
+            <div style="width: 70%;">
+                <h2>입력 값 후보<mark>datalist</mark></h2>
+                <h4>HTML5에 새롭게 추가된 요소로, 텍스트 상자의 입력 값의 후보 목록을 그룹화할 떄 사용한다.
+                    기존HTML4.01이나 XHTML1.0에서 자바스크립트 등을 사용하여 구현했지만, 이제부터는 자바스크립트 없이 이러한 구현이 가능하도록 마크업상에서 지원한다.
+                    <br><br>
+                    <form action="survey.php" method="POST" name="survey">
+                        <label for="usebrowser">주로 사용하는 웹 브라우저를 입력해 주세요</label>
+                        <input type="text" id="usebrowser" size="50" list="browser">
+                        <datalist id="browser">
+                            <option value="크롬" label="Google"></option>
+                            <option value="파이어폭스" label="Mozilla"></option>
+                            <option value="사파리" label="Apple"></option>
+                            <option value="오페라" label="Opera"></option>
+                            <option value="인터넷 익스플로러" label="MIcroSoft"></option>
+                        </datalist>
+                    </form>
+                </h4>
+            </div>
+            <hr>
+            <div style="width: 70%;">
+                <h2>여러 줄 글상자 <mark>textarea</mark></h2>
+                <h4>여러 줄 글상자의 의미로, 텍스트 콘텐츠를 입력받기 위한 폼 서식이다. 해당 요소내에서는 텍스트의 줄바꿈도 가능하다.
+                    textarea 요소에 새롭게 추가된 속성으로는 placeholder, required 속성을 들 수 있다.
+                    요소의 wrap 속성은 textarea 요소 안에서 자동 줄바꿈 처리된 텍스트에 줄바꿈 명령ㅇ을 넣을 것인지의 여부를 결정하는 속성으로,
+                    기본 값은 soft입니다. 줄바꿈을 넣지 않겠다는 의미로, hard는 줄바꿈을 넣겠다는 의미로 사용한다.
+                    
+                    <br><br>
+                    <form action="join.php" method="post" name="memberjoin">
+                        <label for="comment">가입인사</label><br>
+                        <textarea id="comment" cols="50" rows="10" wrap="hard"
+                        required="required" placeholder="가입인사를 남겨주세요"></textarea>
+                        <br>
+                        <input type="submit" value="전송">
+
+                    </form>
+                </h4>
+            </div>
+            <hr>
+            <div style="width: 70%;">
+                <h2>키쌍 생성<mark>keygen</mark></h2>
+                <h4>
+                    폼을 전송할 때 키를 생성하는 서식으로, <u >전자 인증에 주로 사용한다.</u> keygen 요소를 사용하면
+                    폼이 전송된 후에 비밀 키와 공개 키를 생성하여 비밀 키는 웹 브라우저에 저장되고 공개키는 서버에 전송한다.
+                    HTML5에서 keygen 요소에 지원하는 keytype은 rsa만 가능하다.
+                    keygen 요소를 사용하면 웹 브라우저에서 RSA 전자 서명 알고리즘에 사용할 암호화 비트수를 선택할 수 있다.
+                    <br><br>
+                    <form action="login.php" method="post" name="login">
+                        <label for="comment">보안등급  </label><br>
+                        <keygen name="key" type="rsa">
+                    </form>
+                </h4>
+            </div>
+            <hr>
+            <div>
+                <h2>출력 값 <mark>output</mark></h2>
+                <h4>
+                    output 요소는 계산 결과나 input 요소의 출력 값을 나타내고자 하 때 사용한다.
+                    <br><br>
+                    <form action="formula.php" method="post" name="formula">
+                        <input id="a" type="number" title="입력값 A"> +
+                        <input id="b" type="number" title="입력값 B"> =
+                        <output onforminput="value = a.valueAsNumber + b.valueAsNumber"
+                        title="A 더하기 B의 계산 결과"></output>
+                        <br><br>
+                        <input id="bar" type="range" title="범위선택">+
+                        <output onforminput="value = bar.value" title="선택한 범위 값">0</output>
+                    </form>                
+                </h4>
+            </div>
+            <hr>
+            <div style="width: 70%;">
+                <h2>진행 상황 <mark>progress</mark></h2>
+                <h4>
+                    작업의 진행 상황을 나타내고자 할 때 사용한다. HTML4.01이나 XHTML1.0에서는 진행 상황에 대한 의미를 마크업 할 수
+                    있는 요소가 존재하지 않았지만, HTML5에서 추가된 progress 요소를 사용하면 마크업으로 진행하는 상황이라는 의미를 부여할 수 있다.
+                    <br><br>
+                    <form action="formula.php" method="POST" name="formula">
+                        <label for="progress">작업진행률</label>
+                        <progress id="progress" value="0.75" max="1">75%</progress>
+                    </form>
+                </h4>
+            </div>
+            <hr>
+            <div style="width: 70% ;">
+                <h2>한정된 범위 값 <mark>meter</mark></h2>
+                <h4>
+                    meter 요소는 progress 요소와 혼동할 수 있는 요소로, 작업의 진행 상태가 아닌 한정된 범위의 값을 나타내고자 할 때 사용한다.
+                    한정된 범위의 값을 의미하는 meter 요소를 사용하여 마크업할 때는 max 속성의 경우 최대값을, min 속성의 경우 최소값을 지정할 수 있다.
+                    <br><br>
+                    <ul>
+                        meter 요소에서 사용할 수 있는 속성
+                        <li>value - 값</li>
+                        <li>min - 최소값</li>
+                        <li>max - 최대값</li>
+                        <li>low - 낮은 영역의 상한 값으로 지정하지 않으면 min 속성 값과 같은 값으로 간주</li>
+                        <li>high - 높은 영역의 상한 값으로 지정하지 않으면 max 속성 값과 같은 값으로 간주</li>
+                        <li>optimum - 최적 값으로 지정하지 않으면 amx 속성과 min 속성의 중간 값으로 간주</li>
+                    </ul>
+                    <br><br>
+                    <form action="employee.php" method="POST" name="employee">
+                        <label for="ration">인사고과 점수</label>
+                        <meter id="ration" value="7" min="0" low="3" max="10" high="7" optimum="10">
+                            7점
+                        </meter>
+                    </form>
+                </h4>
+
+            </div>
             
 
         </p>
