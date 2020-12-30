@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>3.CSS텍스트</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS파일1.css">
+        <style>
+			.none {
+				text-transform : none ;
+			}
+			.capitalize {
+				text-transform : capitalize ;
+			}
+			.uppercase {
+				text-transform : uppercase ;
+			}
+			.lowercase {
+				text-transform : lowercase ;
+			}
+			.full-width {
+				text-transform : full-width ;
+            }
+         
+			.normal{
+                white-space : normal ;
+                width : 300px ;
+				border : 3px solid #000 ;
+            }
+            .pre{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre ;
+			}
+			.nowrap{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : nowrap ;
+			}		
+			.pre-wrap{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre-wrap ;
+			}
+			.pre-line{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre-line ;
+			}
+            
+			.auto {
+                line-break : auto ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.loose {
+                line-break : loose ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.normal2 {
+                line-break : normal ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.strict {
+                line-break : strict ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+		
+		</style>
+    </head>
+    <body>
+        <button onclick="window.location.href='웹공부.html'">홈으로</button>
+        <header>
+            CSS텍스트
+        </header>
+
+        <div id="wrap">
+            <nav>
+                <ul>
+                    <li><h1><a href="HTML목차.html">HTML</a></h1></li>
+                    <li><h1><a href="CSS목차.html">CSS</a></h1></li>
+                </ul>
+            </nav>
+    
+            <main>
+                <div class="content">
+                    <p id="menu">텍스트(Text)</p>
+                    <p id="des">
+                        텍스트 관련 속성은 Text Module Level 3 에서 정의하고 있으며, 기존에 제공되던 속성 이외에 하이폰(-) 및 구두점(.)과
+                        탭 크기 지정 등의 속성이 추가 되었다.
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">text-transform</p>
+                    <p id="des">
+                        text-transform은 텍스트의 대소 문자를 변환하기 위한 속성으로, 모두 대문자로 변환하는 uppercase,
+                        모두 소문자로 변환하는 lowercase, 그리고 단어의 첫글자를 대문자로 변환하는 capitalize 값과 함께 CSS3에서 full-width값이 추가되었다.
+                        
+                        <h1>text-transform 속성</h1>
+                        <p class="none">
+                            연습글자( abcd ) - text-transform : none;
+                        </p>
+                        <p class="capitalize">
+                            연습글자( abcd ) - text-transform : capitalize;
+                        </p>
+                        <p class="uppercase">
+                            연습글자( abcd ) - text-transform : uppercase;
+                        </p>
+                        <p class="lowercase">
+                            연습글자( abcd ) - text-transform : lowercase;
+                        </p>
+                        <p class="full-width">
+                            연습글자( abcd ) - text-transform : full-width;
+                        </p>
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">white-space</p>
+                    <p id="des">
+                        white-space는 텍스트의 공백과 줄바꿈의 처리 방법을 지정하는 속성으로, 다음과 같은 값을 가지고 있다.
+                        <ul>
+                            <li>normal - 텍스트의 공백은 병합되고 줄바꿈은 무시되며, 요소의 너비에 따라 자동으로 줄바꿈된다.</li>
+                            <li>pre - 텍스트의 공백과 줄바꿈을 그대로 표시하며, 요소의 너비에 따른 자동 줄바꿈은 적용되지 않는다.</li>
+                            <li>nowarp - 텍스트의 공백은 병합되고 줄바꿈은 무시되며, 요소의 너비에 따른 자동 줄바꿈도 적용되지 않는다. 그러므로 이 속성 값이 지정된 텍스트는 한 줄로 표시된다.</li>
+                            <li>pre-wrap - 텍스트의 공백과 줄바꿈이 그대로 표시되고, 요소의 너비에 따른 자동 줄바꿈도 적용된다.</li>
+                            <li>pre-line - 텍스트의 공백은 병합되지만 줄바꿈은 그대로 표시되며, 요소의 너비에 따른 자동 줄바꿈도 적용된다.</li>
+                        </ul>                        
+                        <h1>white-space 속성</h1>
+                        <p class="normal">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - normal
+                        </p>
+                        <p class="pre">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre
+                        </p>
+                        <p class="nowrap">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - nowrap
+                        </p>
+                        <p class="pre-wrap">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre-wrap
+                        </p>
+                        <p class="pre-line">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre-line
+                        </p>        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">line-break</p>
+                    <p id="des">
+                        
+                        line-break는 요소 내 줄바꿈 규칙을 지정하는 속성으로, 일반적인 줄바꿈 규칙은 normal 값이면 엄격한
+                        줄바꿈 규칙을 적용할 경우 strict 값을, 줄바꿈 규칙을 최소화할 경우 loose를 사용한다.
+                        모든 요소의 line-break 속성의 기본 값은 auto이며 auto는 사용자 에이전트에 다라 줄바꿈 규칙을 적용한다.
+                        <h1>line-break 속성</h1>
+                        <p class="auto">
+                            이 단락에는 line-break 속성값이 auto로 적용되었습니다.
+                        </p>
+                        <p class="loose">
+                            이 단락에는 line-break 속성값이 loose로 적용되었습니다.
+                        </p>
+                        <p class="normal2">
+                            이 단락에는 line-break 속성값이 normal로 적용되었습니다.
+                        </p>
+                        <p class="strict">
+                            이 단락에는 line-break 속성값이 strict로 적용되었습니다.
+                        </p>            
+                        
+                        
+                    </p>
+                </div><hr>
+    
+    
+    
+    
+            </main>
+        </div>
+        
+
+    </body>
+</html>
