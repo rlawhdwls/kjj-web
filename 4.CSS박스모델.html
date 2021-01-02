@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <heda>
+        <title>CSS박스모델</title>
+        <meta charset="urf-8">
+        <link rel="stylesheet" href="CSS파일1.css">
+        <style>
+            #wrap2>p, #wrap2>span {
+				border: #F00 solid 2px;
+				padding:5px;
+			}
+			.block {
+				display: block;
+			}
+			.inline {
+				display: inline;
+			}
+			.inline-block {
+				display: inline-block;
+				width: 200px;
+			}
+			.none {
+				display: none;
+				width: 200px;
+			}
+			.run-in{
+				display:run-in;
+			}
+			.list-item{
+				list-style-type:disc;
+				display:list-item;
+				margin-left:2em;
+			}
+			.table{
+				display:table;
+			}
+			.table-caption{
+				display:table-caption;
+				width:400px;
+				text-align:center;
+				margin-bottom:10px;
+			}
+			.table-row{
+				display:table-row
+			}
+			.table-header{
+				display:table-header;
+				border:2px solid #00f;
+				width:200px;
+				padding:10px;
+				text-align:center;
+				margin-right:2px;
+			}
+			.table-cell{
+				display:table-cell;
+				border:2px solid #00f;
+				width:200px;
+				padding:10px;
+				text-align:center;
+			}
+			hr{
+				margin:15px 0;
+			}
+            #wrap-over>p {
+                border: 2px solid blue;
+                position: inline;
+                width: 200px;
+                height: 100px;
+                background-color: tomato;
+                color: white;
+            }
+            #overflow-hidden{
+                overflow: hidden;
+                left:100px;
+            }
+            #overflow-scroll{
+                overflow:scroll;
+                left:500px;
+            }
+            #overflow-y{
+                overflow-y:scroll;
+                left:500px;
+            }
+        </style>
+    </heda>
+    <body>
+        <button onclick="window.location.href='웹공부.html'">홈으로</button>
+        <header>
+            CSS박스모델
+        </header>
+        <div id="wrap">
+            <nav>
+                <ul>
+                    <li><h1><a href="HTML목차.html">HTML</a></h1></li>
+                    <li><h1><a href="CSS목차.html">CSS</a></h1></li>
+                    <li><h1><a href="중국어/중국어.html">중국어</a></h1></li>
+                </ul>
+            </nav>
+    
+            <main>
+                <div class="content">
+                    <p id="menu">박스 모델(Box Model)</p>
+                    <p id="des">
+                        CSS는 요소를 표시하기 위해 요소별로 사각형의 박스를 생성한다. CSS3에서는 속성이 다향해졌지만,
+                        요소를 사각형 박스로 표시하는 것은 크게 다르지 않다.
+                        HTML 요소 박스의 크기는 컨텐츠 크기에 안쪽 여백인 padding과 테두리인 border 그리고 바깥쪽 여백인 margin에 의해 결정된다.
+    
+                        <ul>
+                            <li>content - 요소의 컨텐츠가 표시되는 영역</li>
+                            <li>padding - content 영역과 border 사이의 안쪽 여백</li>
+                            <li>border - padding 영역과 margin 사이의 테두리</li>
+                            <li>margin - border를 기준으로 다른 요소와의 바깥쪽 여백</li>
+                        </ul>
+                    </p>
+                </div><hr>
+    
+                <div class="content">
+                    <p id="menu">display</p>
+                    <p id="des">
+                        
+                        display는 HTML 요소의 표현 방식을 지정하는 속성으로, HTML요소는 각각 기본으로 지정된 display값이 존재하며, 
+                        그 값도 다양하다.
+                        <br>display 속성 값이 inline으로 지정된 요소는 자신의 전후로 줄바꿈을 만들지 않으며, 포함하는 요소가 너비에 의해 자동 줄바꿈된다.
+                        요소의 폭은 컨텐츠에 따라 결정되며, width 속성으로 요소의 너비를 직접 지정할 수는 없다. 
+                        <br>block으로 지정된 요소는 기본적으로 부모 요소의 너비 전체를 채우며, 요소 박스 전후로 줄바꿈이 생긴다.
+                        <br>inline-block으로 지정된 요소는 iunline과 같이 요소 전후로 줄바꿈이 생기지는 않지만, block요소처럼 width 속성으로 요소의 너비를 직접 지정할 수 있다.
+                        <br>none값은 화면에 요소를 표시하지 않는다.
+                        <br>run-in은 요소의 형제 요소가 block 요소가 아니면 ,block 요소로 정의되고, block요소이면 inline 요소로 정의된다.
+                        <br>list-item은 목록 요소로 보여지도록 한다. 그밖에 table, ruby가 있다.
+    
+                        <ul>
+                            <li>content - 요소의 컨텐츠가 표시되는 영역</li>
+                            <li>padding - content 영역과 border 사이의 안쪽 여백</li>
+                            <li>border - padding 영역과 margin 사이의 테두리</li>
+                            <li>margin - border를 기준으로 다른 요소와의 바깥쪽 여백</li>
+                        </ul>
+    
+                        <div id="wrap2">
+                            <h1>display 속성</h1>
+                            <p class="block">
+                                block
+                            </p>
+                            <hr>
+                            <div class="inline">
+                                <span>inline</span> <span>inline</span>
+                            </div>
+                            <hr>
+                            <p class="inline-block">
+                                inline-block
+                            </p>
+                            <hr>
+                            <p class="none">
+                                none
+                            </p>
+                            <div>
+                                <div class="run-in"> run-in box </div>
+                                <span>형제 요소가 인라인 박스인 경우</span>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="run-in"> run-in box </div>
+                                <div>형제 요소가 블록 박스인 경우</div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="list-item">목록 항목 입니다.</div>
+                                <div class="list-item">목록 항목 입니다.</div>
+                            </div>
+                            <hr>
+                            <div class="table">
+                                <div class="table-caption">테이블 캡션으로 변환</div>
+                                <div class="table-row">
+                                    <div class="table-header">테이블 제목셀로 변환</div>
+                                    <div class="table-cell">테이블 내용셀로 변환</div>
+                                </div>			
+                            </div>
+                        </div>
+                        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">overflow</p>
+                    <p id="des">
+                        
+                        overflow는 컨텐츠가 요소의 컨텐츠 영역을 벗어나는 경우의 처리 방법을 지정하는 속성으로, visible은 오버 플로우된 컨텐츠를 그대로 표시한다. 
+                        이때 오버 플로우된 컨텐츠의 영역은 요소의 크기에 반영되지 않는다. hidden의 경우 오버 플로우된 컨텐츠를 숨기고 scroll은 요소 박스에 스크롤 바를 생성한다.
+                        auto 속성 값의 경우 사용자 도구의 기본 설정 값대로 작동하도록 한다.
+                        <div id="wrap-over">
+                            <p id="overflow-hidden">hidden - overflow는 콘텐츠가 요소의 콘텐츠 영역을 벗어나는 경우
+                                처리방법을 지정하는 속성이다. overflow 속성을 방향 별로
+                                지정하기 위한 상세 속성 overflow-X, overflow-Y를 사용 할 수 있다.</p>
+                           <p id="overflow-scroll">scroll - overflow는 콘텐츠가 요소의 콘텐츠 영역을 벗어나는 경우
+                                처리방법을 지정하는 속성이다. overflow 속성을 방향 별로
+                                지정하기 위한 상세 속성 overflow-X, overflow-Y를 사용 할 수 있다.</p> 
+                           <p id="overflow-y">overflow-y - overflow는 콘텐츠가 요소의 콘텐츠 영역을 벗어나는 경우
+                                처리방법을 지정하는 속성이다. overflow 속성을 방향 별로
+                                지정하기 위한 상세 속성 overflow-X, overflow-Y를 사용 할 수 있다.</p> 
+                        </div>
+                              
+                    </p>
+                </div><hr>
+    
+    
+            </main>
+        </div>
+       
+
+
+    </body>
+</html>
