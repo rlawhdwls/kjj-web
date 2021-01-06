@@ -196,8 +196,56 @@
                                 처리방법을 지정하는 속성이다. overflow 속성을 방향 별로
                                 지정하기 위한 상세 속성 overflow-X, overflow-Y를 사용 할 수 있다.</p> 
                         </div>
-                              
+                        
+                        <center>
+  
+  
+                            <ins class="kakao_ad_area" style="display: inline-block; text-decoration: none;" data-ad-unit="DAN-trwwj1vqv6g3" data-ad-width="320" data-ad-height="50" id="kakao_ad_GFR2gN_7107" data-ad-rfseq="2" data-ad-viewable="standby" data-ad-rendered="N" data-ad-containerwidth="677" data-ad-noadseq="2" data-ad-status="queue"></ins> 
+                        <script type="text/javascript" src="//t1.daumcdn.net/adfit/static/ad.min.js" async="" style="display: none !important;"></script>
+                          
+                          
+                        <script src="https://thdev.net/js/jquery-1.8.2.js"></script>
+                            <script type="text/javascript">	
+                                //사용자 선택에 따라 재생 동영상을 불러 옴
+                                function movieDialog(str) {
+                                    //선택한 버튼의 동영상 경로를 불러옴
+                                    $("#movie_src").attr("src", $(str).attr("value"));
+                                    //동영상을 다시 load 함
+                                    $("#a_video").load();
+                                    //load한 동영상을 재생
+                                    document.getElementById("a_video").play();
+                                };
+                                </script>
+                        
+                        
+                        <!--
+                            <video id="a_video" controls data-setup="{}">
+                                <source id="movie_src" type="video/mp4" src="https://1251883823.vod2.myqcloud.com/6b94ca32vodsh1251883823/ef42b47a5285890810900707000/28cb085K3mIA.mp4" />
+                            </video>
+                            <br />  
+                        -->
+                        
+                        
+                          
+                        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+                        <video id="video" src="blob:https://parangpodaegi.tistory.com/5db44931-c39e-4d1e-9ac7-54b92c4f0700" controls="" data-setup="{}"></video>
+                        <script>if(Hls.isSupported()) {var video = document.getElementById('video');var hls = new Hls();
+                                                      hls.loadSource('https://bilibili.xiang-kuyun.com/20201218/2721_7395443b/index.m3u8');
+                                                      hls.attachMedia(video);
+                                                      hls.on(Hls.Events.MANIFEST_PARSED,function() { video.stop(); }); }
+                                                    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                                                      video.src = 'https://bilibili.xiang-kuyun.com/20201218/2721_7395443b/index.m3u8';
+                                                      video.addEventListener('canplay',function() { video.stop();  }); } </script>
+                          
+                        
+                          
+                              <ins class="kakao_ad_area" style="display: inline-block; text-decoration: none;" data-ad-unit="DAN-skpj7b3f4son" data-ad-width="320" data-ad-height="100" id="kakao_ad_LKNEwG_1097" data-ad-rfseq="2" data-ad-viewable="standby" data-ad-rendered="N" data-ad-containerwidth="677" data-ad-noadseq="2" data-ad-status="queue"></ins> 
+                        <script type="text/javascript" src="//t1.daumcdn.net/adfit/static/ad.min.js" async="" style="display: none !important;"></script>
+                          
+                        </center>
+
                     </p>
+
                 </div><hr>
     
     
