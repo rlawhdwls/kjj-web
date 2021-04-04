@@ -1,79 +1,74 @@
-html{
-    background-color: gold;
-    height: 100vh;
-    
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    padding: 1%;
-    margin: 0%;
-    height: 100vh;
-    
+a {
+  text-decoration: none;
+  color: #111;
 }
-header{
-    width: 100%;
-    height: 110px;
-    display: inline-block;
-    text-align: center;
-    font-size: 5em;
-    font-weight: bold;
-    color:white;
-    background-color: black;
+.header {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 5em;
+  font-weight: bold;
+  color: #f8bbd0;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin: auto;
+  margin-bottom: 5%;
+  text-shadow: 5px 5px 3px rgba(100, 50, 100, 10),
+    0 -10px 200px rgba(130, 130, 130, 130);
+  border-bottom: 1px solid black;
 }
-main{
-    width: 85%;
-    float: right;
-    
-    background-color: white;
-    
+.nav-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 5%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5% auto;
+}
+.nav-ul > li {
+  padding-left: 2rem;
+}
+.nav-ul > li > a:hover {
+  font-size: 3rem;
+}
+.content1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin: 5% auto;
+}
+.youtube {
+  margin: 5% auto;
+  border-bottom: 2px solid salmon;
+}
+#title {
+  font-size: 2rem;
+  color: cadetblue;
+}
 
+button {
+  color: #00008c;
+  background-color: gold;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  border-color: white;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
 }
-#wrap{
-    display: flex;
-}
-nav{
-    width: 15%;
-    float: left;
-    
-    background-color: silver;
-}            
-a:link{
-    color: black;
-    text-decoration: none;
-}
-a:visited{
-    color: black;
-    text-decoration: none;
-}
-a:hover{
-    color:blue;
-    text-decoration: underline;
-}
-button{
-    color: #00008C;
-    background-color: gold;
-    font-size: 20px;
-    height: 50px;
-    width: 100px;
-    border-color: white ;
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-}
-.content{
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 90%;
-}
-#menu{
-    font-size: 2em;
-    font-weight: bold;
-    background-color: skyblue;
-    color: #941494	;
-    
-}
-#des{
-    font-size: 1em;
-    font-weight: normal;
-    background-color: #FFE6E6;
-    
+.content {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
 }
