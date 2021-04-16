@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>13.CSS속성</title>
+        <meta charset="utf-8">
+        <style>
+            button{
+                color: red;
+                background-color: gold;
+                font-size: 20px;
+                height: 50px;
+                width: 100px;
+                border-color: white ;
+                position: fixed;
+                right: 15px;
+                bottom: 15px;
+            }
+            details{
+                margin: 10px;
+                padding: 10px;
+                width: 70%;
+                border:3px solid gold;                
+            }
+            summary{
+                font-size: 20px;
+                color: blue;
+            }
+            #home{
+                font: 50px red bold;
+                border: 3px solid blue;
+                background-color: #ffff00;
+                text-align: center;
+               
+            }
+            a:link{ color: red; text-decoration: none;}
+            a:visited { color: black; text-decoration: none;}
+            a:hover { color: blue; text-decoration: underline;}
+            .ex{
+                border: 3px solid silver;
+                text-align: left;
+                padding-left: 30%;
+                
+            }
+            .font-family{
+                font-family: '맑은 고딕','돋움',sans-serif;
+            }
+            .font-weight1{
+                font-weight: 400;
+            }
+            
+            .font-weight2{
+                font-weight: bold;
+            }
+            #stretch1{
+                font-stretch: Condensed;
+            }
+            #stretch2{
+                font-stretch: normal;
+            }
+            #stretch3{
+                font-stretch: expanded;
+            }
+            #style1{
+                font-style: italic;
+            }
+            
+            #style2{
+                font-style: oblique;
+            }
+            #size1{
+                font-size: 18px;
+            }
+            #size2{
+                font-size: 2em;
+            }
+            #size3{
+                font-size: small;
+            }
+            #adjust{
+                font-size-adjust: 0.7;
+            }
+            
+			.font01 {
+				font : 12px/14px sans-serif ;
+			}
+			.font02 {
+				font : 80% sans-serif ;
+			}
+			.font03 {
+				font : 14px/110% "돋움", sans-serif ;
+			}
+			.font04 {
+				font : bold italic large Palatino, sans-serif ;
+			}
+			.font05 {
+				font : normal small-caps 120%/120% fantasy ;
+			}
+			.font06 {
+				font : condensed oblique 12px "돋움", sans-serif ;
+			}
+           
+		
+        </style>
+    </head>
+    <body>  
+        <button onclick="window.location.href='웹공부.html'" >홈으로</button>    
+        <p id="home"><a href="웹공부.html">처음으로</a></p>
+        <h1>CSS폰트</h1><hr>
+        <details open>
+            <summary>font-family</summary>
+            <p>
+                font-famaily는 텍스트의 폰트를 지정하는 속성으로, 속성 값은 복수로 지정할 수 있으며, 지정된 순서대로 표시할 수 있는
+                폰트를 찾게 된다. 웹 브라우저가 표시할 수 있는 폰트를 찾으면 이후에 지정된 속성 값들은 무시된다.
+                family-name은 OS에서 사용하는 폰트 이름으로, 폰트 파일 이름과는 다르다. 예를 들면 Windows의 기본
+                폰트 이름은 '맑은 고딕'이며, 파일 이름은 'malgun.ttf'이다. 'generic-family'는 범용 폰트 그룹으로
+                'serif', 'sans-serif', 'cursive'(필기체), 'fantasy', 'monospace'(고정폭)가 있다.
+                CSS는 사용자 OS에 설치된 폰트를 위의 다섯 가지 범용 폰트 패밀리로 구분하여 관리한다. 
+                다시말해 'sans-serif'는 특정 폰트를 지정하는 것이 아니라 'Helvetica', 'Geneva', 'Verdana', 'Arial', 'Univers'와 
+                같은 폰트를 그룹화하여 지정하는 것이다.
+                <div class="ex">
+                    <div class="font-family">연습 글자 연습글자 - 맑은 고딕, 돋움, sans-serif</div>
+                </div>
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font-weight</summary>
+            <p>
+                font-weight는 폰트가 표시되는 굵기를 지정하는 속성으로, 100~900 사이의 굵기 단계를 표시하는
+                수치 값이나 normal, bold 등의 키워드로 선언할 수 있다. 이때 굵기 단계의 수치가 높을수록 더 굵게 
+                표시된다. 그러나 표시되는 단계의 굵기는 CSS의 기능이 아니라 폰트 파일이 가지고 있는 값으로, 폰트에 따라서는 모든 단계가
+                표시되지 않을 수 있다. 보통 100~400은 가는 굵기로, 500~600은 중간 굵기, 700~900은 두꺼운 굵기로 표시된다.
+                키워드의 경우 수치 값과 대응되어 'normal'은 수치 값 400과 같이 중간 굵기로, 'bold'는 수치 값 700과 같이 두꺼운 굵기로 표시된다.
+                <div class="ex">
+                    <div class="font-weight1">연습글자 - font-weight:400</div>
+                    <div class="font-weight2">연습글자 - font-weight:bold</div>
+                </div>
+                
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font-stretch</summary>
+            <p>
+                font-stretch는 폰트의 장평을 지정하기 위한 속성으로, 정상 크기인 normal을 기준으로 장평을 축소하는 값인
+                <ul>
+                    <li>ultra-condensed</li>
+                    <li>extra-condensed</li>
+                    <li>condensed</li>
+                    <li>semi-condensed</li>
+                </ul>
+                 <br>장평을 확대하는
+                <ul>
+                    <li>semi-expanded</li>
+                    <li>expanded</li>
+                    <li>extra-expanded</li>
+                    <li>ultra-expanded</li>
+                </ul> 값을 사용할 수 있다.<br><br>
+                <div class="ex">
+                    <div id="stretch1"> 연습글자 - Condensed</div>
+                    <div id="stretch2"> 연습글자 - normal</div>
+                    <div id="stretch3"> 연습글자 - Expanded</div>
+                </div>
+                
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font-style</summary>
+            <p>
+                font-style은 폰트의 표시 형태를 지정하는 속성으로, 폰트의 기본 형태로 표시하는 normal 값과 이탤릭체
+                또는 기울임꼴로 표시하는 italic과 oblique가 있다. font-style 속성 값이 italic으로 지정될 경우
+                sans-serif는 serif로 font-family가 변경된다.
+                <br><br>
+                oblique 속성 값이 italic과 다른 점은 원래의 font-family의 변경 없이 글꼴을 기울여 표시한다는 점이다.
+                font-style의 표시 형태는 폰트 파일의 기능으로 대부분의 폰트 파일이 oblique, italic를 모두 지원하지 않고
+                한 가지만 지원하기 때문에 일반적인 경우, oblique, italic의 형태는 동일하게 표시된다.
+                <div class="ex">
+                    <div id="style1"> 연습글자 - italic</div>
+                    <div id="style2"> 연습글자 - oblique</div>                    
+                </div>
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font-size</summary>
+            <p>
+                font-size는 폰트의 크기를 지정하는 속성으로
+                <ul>
+                    <li>xx-small</li>
+                    <li>x-small</li>
+                    <li>small</li>
+                    <li>medium</li>
+                    <li>large</li>
+                    <li>x-large</li>
+                    <li>xx-large</li>                   
+                </ul>와 같은 절대 크기가 있다.
+
+                <ul>
+                    <li>smaller</li>
+                    <li>larger</li>                                      
+                </ul>와 같은 상대 크기들도 사용가능하다.
+                <br>이때, 절대 크기의 기준은 medium으로 정해진 크기가 아니라 사용자 환경의 기본 값 크기를 의미한다.
+                
+
+                <div class="ex">
+                    <div id="size1"> 연습글자 - 18px</div>
+                    <div id="size2"> 연습글자 - 2em</div>    
+                    <div id="size3"> 연습글자 - small</div>                
+                </div>
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font-size-adjust</summary>
+            <p>
+                font-size-adjust 속성은 소문자의 높이를 기준으로 글자 크기를 조절할 때 사용한다.
+                font-size속성에서 지정된 글자의 높이와 소문자 x의 높이의 비율을 기준으로 계산된 결과가 클수록 글자가 작은 크기로 지정되었을 때 
+                가독성이 높아진다.
+                <br>
+                예를들어, Verdana 글꼴의 경우 글자 크기가 100px일때 소문자 x의 높이는 58px이기 때문에 글자 크기 비율은 0.58이다.
+                이 비율은 font-size-adjust 속성으로 조절할 수 있다.
+                <br>
+                <div class="ex">
+                    <div id="adjust">연습글자 - font-size-adjust : 0.7</div>
+                </div>
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>font</summary>
+            <p>
+                font는 폰트 관련 속성을 일괄적으로 지정하기 위한 대표 속성이다.
+                font속성 값은 기존 CSS2에서 지원했던 값 이외에 다양한 속성 값이 추가되었다.
+                <br>font-style, font-weight, font-size, font-family등의 속성 값을 공란으로 구분하여 작성한다.
+                이 중 속성 값이 기본 값인 하위 속성 값은 생략할 수 있지만 font-size 속성과 font-family속성 값은 반드시 작성해야한다.
+
+                <br>
+                <div class="ex">
+                        <p class="font01">
+                            연습글자 - font : 12px/14px sans-serif
+                        </p>
+                        <p class="font02">
+                            연습글자 - font : 80% sans-serif
+                        </p>
+                        <p class="font03">
+                            연습글자 - font : 14px/110% "돋움", sans-serif
+                        </p>
+                        <p class="font04">
+                            연습글자 - font : bold italic large Palatino, sans-serif
+                        </p>
+                        <p class="font05">
+                            연습글자 - font : normal small-caps 120%/120% fantasy
+                        </p>
+                        <p class="font06">
+                            연습글자 - font : condensed oblique 12px "돋움", sans-serif
+                        </p>
+                </div>
+            </p>
+        </details>
+        <hr>
+        <details open>
+            <summary>@font-face</summary>
+            <p>
+                @font-face는 일반적인 속성과 달리 CSS에서 사용할 font-family의 이름과 자원을 정의할 수 있는 규칙으로,
+                사용자의 환경에 설치된 폰트 또는 제작자가 서버에서 제공한 폰트를 다운로드 하여 사용할 수 있도록 해준다.
+                <br>
+                인터넷 익스플로러9의 경우 eot 형식과 함께 woff 형식을 지원한다.<br>
+                그 밖의 브라우저는 woff형식을 지원한다.
+                <br>
+                <div class="ex">
+                        <p class="face">
+                            연습글자 - font-family : "Nanum", sans-serif ; 안되는듯..?
+                        </p>
+                        
+                </div>
+            </p>
+        </details>
+        <hr>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+  <title>5장_숫자게임</title>
+  <style>
+    
+    .header1{
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .header_sub{
+      display: flex;
+      justify-content: center;
+    }
+    .form{
+      display: flex;
+      justify-content: center;
+      margin: 3%;
+    }
+    .resultparas{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body> 
+  <div class="home">
+    <a href="../웹공부.html">Home</a>
+  </div>
+  <div class="header">
+      <div>WEB</div>
+  </div>
+  <ul class="nav-ul">
+      <li><a href="../웹공부.html">HOME</a></li>
+      <li><a href="../HTML목차.html">HTML</a></li>
+      <li><a href="../CSS목차.html">CSS</a></li>
+      <li><a href="../JavaScript.html">JavaScript</a></li>
+      <li><a href="../DataBase.html">DataBase</a></li>
+  </ul>
+  <div class="header1">숫자게임</div>
+  <div class="header_sub">
+    1~100까지의 랜덤의 숫자를 맞춰라! <br>
+    총10번의 기회가 주어진다. <br>
+    무야호~
+  </div>
+
+  <div class="form">
+    <label for="guesstext">정답은? :</label>
+    <input type="text" id="guesstext" class="guesstext">
+    <input type="submit" value="입력" class="guessbt">
+  </div>
+
+  <div class="resultparas">
+    <div class="guesses"></div>
+    <div class="lastresult"></div>
+    <div class="loworhi"></div>
+    <div class="count"></div>
+  </div>
+
+  <script >
+    /*
+    let randomvalue = Math.floor(Math.random*100)+1;
+    let guessbt = document.querySelector('.guessbt');
+    let guesstext = document.querySelector('.guesstext');
+    let guesses = document.querySelector('.guesses');
+    guessbt.addEventListener('click',checktime);
+    let usercount=1;
+    
+
+    function checktime(){
+      let uservalue = Number(guesstext.value);
+      guesses.textContent+=' '+uservalue;
+      guesstext.value='';
+      usercount++;
+    }   
+    */
+
+    // 랜덤값 생성
+    let ranval=Math.floor(Math.random()*100)+1;
+    // input 요소 변수 생성
+    let guesstext=document.querySelector('.guesstext');
+    let guessbt = document.querySelector('.guessbt');
+    // HTML에 임시로 만들어준 div tag 변수 생성
+    let guesses = document.querySelector('.guesses');
+    let lastresult = document.querySelector('.lastresult');
+    let loworhi = document.querySelector('.loworhi');
+    let count = document.querySelector('.count');
+    // 리셋버튼
+    let resetbt;
+    // 추측값 변수 생성
+    let guesscount = 1;
+    guessbt.addEventListener('click',checktime);
+    
+    // 정답을 확인하는 함수 생성
+    function checktime(){
+      // 입력한 값에 대한 변수
+      let userguess = Number(guesstext.value);
+      
+      // 초기화
+      if(guesscount===1){
+        guesses.textContent='이전 값들 : ';
+        // 리셋버튼
+        resetbt=document.createElement('button');
+        resetbt.textContent='다시시작';
+        document.body.appendChild(resetbt);
+        resetbt.addEventListener('click',resetgame);
+      }
+      guesses.textContent += userguess + ' ';
+      
+      //추측값과 정답 확인 과정
+      if(userguess===ranval){
+        lastresult.textContent='축하축하 정답입니다.';
+        lastresult.style.background="green";
+        loworhi.textContent=' ';
+        gameover();
+      }else if(guesscount===10){
+        lastresult.textContent='실패 _ 10번의 도전이 끝났다';
+        loworhi.textContent=' ';
+        resetbt.parentNode.removeChild(resetbt);
+        gameover();
+      }else{
+        lastresult.style.background="red";
+        if(userguess>ranval){
+          lastresult.textContent='그 수 보다는 작은 수 입니다.';
+          
+        }else if(userguess<ranval){
+          lastresult.textContent='그 수 보다는 큰 수 입니다.';
+          
+        }
+      }
+      count.textContent= 'Count :'+ ' '+ guesscount;
+      guesscount++;
+      guesstext.value=' ';
+      guesstext.focus();
+      
+    }
+    
+
+    function gameover(){
+      // 10번이 틀렸을 경우 : text칸과 버튼을 사용불가하게함
+      guesstext.disabled=true;
+      guessbt.disabled=true;
+      // 리셋버튼 요소를 만듦
+      resetbt=document.createElement('button');
+      // 리셋버튼의 value값=이름
+      resetbt.textContent='새로운 게임';
+      // 부모(=body)의 리스트 끝에 버튼을 추가
+      document.body.appendChild(resetbt);
+      // 버튼 이벤트 생성
+      resetbt.addEventListener('click',resetgame);
+    }
+
+    function resetgame(){
+      // text와 버튼 사용가능하게함
+      guesstext.disabled=false;
+      guessbt.disabled=false;
+      // resultparas를 변수화
+      let paras = document.querySelectorAll('.resultparas div');
+      // resultparas의 리스트를 하나씩 초기화
+      for(let i=0;i<paras.length;i++){
+        paras[i].textContent='';
+      }
+      /*
+      guesses.textContent='';
+      loworhi.textContent='';
+      lastresult.textContent='';
+      count.textContent='';
+      */
+
+      // 랜덤값 생성
+      ranval=Math.floor(Math.random()*100)+1;
+      // resetbt제거
+      resetbt.parentNode.removeChild(resetbt);
+      // 카운트초기화
+      guesscount=1;
+    }
+    
+      
+
+  </script>
+
+</body>
+</html>

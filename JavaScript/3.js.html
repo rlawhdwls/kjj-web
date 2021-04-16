@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+        <ul class="nav-ul">
+            <li><a href="../웹공부.html">HOME</a></li>
+            <li><a href="../HTML목차.html">HTML</a></li>
+            <li><a href="../CSS목차.html">CSS</a></li>
+            <li><a href="../JavaScript.html">JavaScript</a></li>
+            <li><a href="../DataBase.html">DataBase</a></li>
+        </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">실습</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">내부 자바스크립트 코드로 적용</p>
+            <div class="ex ex1">
+                < script ><br>
+                <pre>   document.getElementById("text").innerHTML = "여러분을 환영합니다!";</pre> 
+                < /script > <label for=""><--HTML문서 내부에 코드를 직접 입력함</label>
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">외부 자바스크립트 파일로 적용</p>
+            <div class="ex ex2">
+                외부에 작성된 자바스크립트 파일은 .js 확장자를 사용하여 저장한다.<br><br>
+                < script src="/examples/media/example.js" >< /script ><br><br>
+                외부 자바스크립트 파일을 사용하면 웹의 내용을 담당하는 HTML 코드로부터 웹의 동작을
+                구현하는 자바스크립트 코드를 분리하여, 가독성과 유지 보수가 쉽고 로딩 속도 또한 빨라진다.
+                
+            </div>
+        </div>
+        
+
+    </div>
+    <scrip type="text/javascript" src="1.js" defer></scrip>
+
+</body>
+</html>

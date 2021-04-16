@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>8.표 관련 요소</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p><a href="웹공부.html">처음으로</a></p>
+        <p><h1>표 관련 요소</h1></p>
+        <h4>표 관련 요소는 열과 행으로 구분되는 2차원 형태의 데이터 테이블을 마크업할 때 사용한다.
+            <br>주요 요소로는 table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td 요소가 있다.
+            <br>기존에 웹 문서를 제작할 때는 table 관련 요소를 레이아웃을 위해 주로 사용했는데, 이는 구조적인 마크업을 해치며 웹 접근성에도 나쁜 영향을 끼치는 사례라고 본다.</h4>
+        <hr>
+        <p>
+            <h2>표<mark>table, tr, th, td</mark></h2>
+            
+            <h4>
+                데이터 테이블은 table 요소에 행을 의미하는 tr 요소를 자식 요소로 포함하고,
+                <br>tr 요소 내에서는 th, td 요소를 사용하여 마크업한다.
+                <br>th 요소는 데이터 테이블의 제목 셀을 의미하며, 이는 데이터 테이블의 필드에 해당한다.
+                <br>th 요소에 scope 속성을 사용하여 해당 셀이 영향을 주는 내용 셀의 범위를 지정할 수 있다.
+                <br>예를들어 th 요소로 마크업한 셀이 동일한 열에 있는 내용 셀과 연관성이 있는 경우 scope="col", 
+                <br>동일한 행에 있는 내용 셀과 연관성이 있는 경우 scope="row" 형식으로 지정할 수 있다.
+                <br>행이나 열 그룹으로 지정된 범위의 제목 셀이라면 colgroup, rowgroup 등의 값을 지정할 수도 있다.
+                <br>td 요소는 테이블의 내용 셀을 의미한다. HTML5에서 td 요소는 섹셔닝 루트 요소이기 때문에 td 요소 안에 제목 등을 사용하였다고 해도
+                <br>독립된 컨텐츠로 인식되기 때문에 아웃라인에 영향을 주지 않는다.
+                <br>특정 셀을 병합하고자 할 때 병합하고자 하는 방향에 따라 열이 다른 셀을 병합할 때는 colspan 속성
+                <br>행이 서로 다른 셀을 병합할 때는 rowspan 속성을 사용한다.<br><br>
+
+                <table border="3">
+                    <tr>
+                        <th>이름</th>
+                        <th colspan="2">정의</th>
+                    </tr>
+                    <tr>
+                        <td>머시기</td>
+                        <td>뜻이 없는 그냥 아무개이다.</td>
+                        <td>O</td>                        
+                    </tr>
+                    <tr>
+                        <td>잡동이</td>
+                        <td>뜻 그대로 잡동산이다.</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">뭥미뭥미</td>
+                        <td>뜻이 없다.</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>뜻 없다. 뭐냐</td>
+                        <td>X</td>
+                    </tr>
+                </table>
+            </h4>
+        </p>
+        <hr>
+        <p>
+            <h2>표의 캡션<mark>caption</mark></h2>
+            <h4>
+                caption 요소는 table 요소에 제목이나 설명을 마크업할 때 사용하는 요소이다.
+                <br>table 요소 안에 가장 먼저 마크업해야 하며, 필수 요소는 아니다. 만약 테이블을 HTML5에서 추가된 신규 요소인 figure 안에 마크업할 경우, 
+                <br>figcaption이 caption의 역할을 대신하도록 한다.<br><br>
+
+                <table border="3">
+                    <captiion>이름</captiion>
+                    <tr>
+                        <th>이름</th>
+                        <th colspan="2">정의</th>
+                    </tr>
+                    <tr>
+                        <td>머시기</td>
+                        <td>뜻이 없는 그냥 아무개이다.</td>
+                        <td>O</td>                        
+                    </tr>
+                    <tr>
+                        <td>잡동이</td>
+                        <td>뜻 그대로 잡동산이다.</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">뭥미뭥미</td>
+                        <td>뜻이 없다.</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>뜻 없다. 뭐냐</td>
+                        <td>X</td>
+                    </tr>
+                </table>
+            </h4>            
+        </p>
+        <hr>
+        <p>
+            <h2>열 그룹<mark>col, colgroup</mark></h2>
+            <h4>
+                col 요소는 테이블의 열 그룹을 의미한다. colgroup 요소를 사용하여 2개 이상의 열을 그룹화한 경우,
+                <br>span속성을 사용할 수 있다. 이때 span="2"는 2개의 열을 그룹화했음을 의미하며, colgroup요소의 자식 요소로
+                <br>col 요소를 사용하여 2개의 열이 각각 어떤 의미를 가지는지에 대한 의미를 부여하고 특정 열에 스타일을 지정할 수 있다.
+                <br>의미 없이 스타일만을 적용하기 위해 사용하는 것은 바람직하지 않다.
+                <br><br>
+                colgroup 요소는 caption 요소 다음에 마크업 되야하며, thead, tbody, tfoot 요소보다 이전에 마크업해야 한다.
+                <br><br>
+                <table border="3">
+                    <caption>
+                        2013년 사회인 야구팀 순위
+                    </caption>
+                    <colgroup class="ranking"></colgroup>
+                    <colgroup class="team"></colgroup>
+                    <colgroup span="2" class="game">
+                        <col class="victory">
+                        <col class="defeat">
+                    </colgroup>
+                    <tbody><tr>
+                        <th scope="col">순위</th>
+                        <th scope="col">팀명</th>
+                        <th scope="col">승</th>
+                        <th scope="col">패</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>최강 홀릭</td>
+                        <td>30</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>막강 투타</td>
+                        <td>28</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>열정 그대</td>
+                        <td>26</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>환희 그날</td>
+                        <td>22</td>
+                        <td>28</td>
+                    </tr>
+                </tbody></table>
+            </h4>            
+        </p>
+        <hr>
+        <p>
+            <h2>행 그룹<mark>thead, tbody, tfoot</mark></h2>
+            
+            <h4>
+                테이블의 행 그룹을 의미하며 thead 요소는 데이터 테이블의 제목 셀 그룹으로, tbody요소는 테이블의 본문 행을 의미하며,
+                <br>tbody 요소는 원래 필수 요소 이다. 그러나 tbody를 생략하더라도 대다수의 웹 브라우저에서 있는 것으로 가정하고
+                <br>DOM을 구성한다. 마지막으로 tfoot요소는 레코드 내용의 소계나 합계 등의 정보에 해당하는 푸터 행을 의미하며,
+                <br>thead 요소와 tfoot 요소는 table 요소 내에서 한 번만 사용할 수 있다.
+                <br>또한 마크업 시 thead, tbody, tfoot 또는 thead, tfoot, tbody 순서로 작성할 수 있으며,
+                <br>두가지 경우 모두 tfoot 요소는 테이블의 가장 마지막에 렌더링 된다.
+                <br><br>
+
+                <table border="3">
+                    <caption>
+                        최강 음원 다운로드 (단위:백만)
+                    </caption>
+
+                    <colgroup class="title"></colgroup>
+                    <colgroup class="singer"></colgroup>
+                    <colgroup class="download"></colgroup>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">곡명</th>
+                            <th scope="col">가수</th>
+                            <th scope="col">다운로드</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>나와 같다면</td>
+                            <td>김연우</td>
+                            <td>5,896</td>
+                        </tr>
+                        <tr>
+                            <td>여러분</td>
+                            <td>임재범</td>
+                            <td>7,895</td>
+                        </tr>
+                        <tr>
+                            <td>편지</td>
+                            <td>BMK</td>
+                            <td>6,032</td>
+                        </tr>
+                        <tr>
+                            <td>늪</td>
+                            <td>김범수</td>
+                            <td>5,398</td>
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">다운로드 합계</td>
+                            <td>25,221</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+            </h4>
+        </p>
+
+
+
+
+    </body>
+
+</html>

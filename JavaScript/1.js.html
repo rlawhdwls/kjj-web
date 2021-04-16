@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+        <ul class="nav-ul">
+            <li><a href="../웹공부.html">HOME</a></li>
+            <li><a href="../HTML목차.html">HTML</a></li>
+            <li><a href="../CSS목차.html">CSS</a></li>
+            <li><a href="../JavaScript.html">JavaScript</a></li>
+            <li><a href="../DataBase.html">DataBase</a></li>
+        </ul>
+    
+    <div class="content">
+        <h1>실습</h1>
+        
+        <div class="button">
+            <input type="button" value="night" onclick="
+            document.querySelector('.content').style.backgroundColor='black';
+            document.querySelector('.content').style.color='white'">
+            <input type="button" value="day" onclick="
+            document.querySelector('.content').style.backgroundColor='white';
+            document.querySelector('.content').style.color='black'"><br>
+            <input class="night_day" type="button" value="day" onclick="
+            let target = document.querySelector('.content');
+            if(this.value==='day')
+            {
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                document.querySelector('.night_day').value='night';
+                // this.value='night';                
+            }
+            else{
+                target.style.backgroundColor='white';
+                target.style.color='black'
+                document.querySelector('.night_day').value='day'; 
+                // this.value='day';
+            }
+            "><label for="" title="asdf">토글버튼</label>
+            
+            <br>
+            <input class="night_day1" type="button" value="day" onclick="
+            let target = document.querySelector('.content');
+            if(this.value==='day')
+            {
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                this.value='night';             
+                // anchor 하나씩 css적용
+                let link=document.querySelectorAll('a');
+                    // for
+                for(i=0;i<link.length;i++){
+                link[i].style.color='blue';
+                };   
+            }
+            else{
+                target.style.backgroundColor='white';
+                target.style.color='black'
+                this.value='day';
+                var link=document.querySelectorAll('a');
+                for(i=0;i<link.length;i++) {
+                link[i].style.color='red';
+                };
+            }
+            "><label for="" title="asdf">anchor_토글버튼</label>
+        </div>
+
+
+        <div class="test_anchor">
+            <li class="anchor"><a href="">asdf</a></li>
+            <li class="anchor"><a href="">asdf</a></li>
+            <li class="anchor"><a href="">asdf</a></li>
+        </div>
+        <div class="sub">
+
+            <li>Button 코드 ->
+                <code>onclick="
+                    document.querySelector('.content').style.backgroundColor='black';
+                    document.querySelector('.content>h1').style.color='white'"</code>                    
+            </li>
+
+            <li>Body Tag 선택하는 코드 -> <code>document.querySelector('body')</code>
+            </li>
+
+            <li>Selector 뒤에 스타일 -> <code>.style.backgrountColor='black'</code></li>
+        </div>
+            
+
+        <div class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae repellendus et, fuga tempore iste odio saepe aspernatur animi ipsam, cumque neque repudiandae nulla deserunt distinctio iure dolore! Dicta, beatae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, libero eum? Rerum aut sed officia cumque nulla ullam eum perspiciatis possimus cum earum eaque, mollitia commodi esse harum hic voluptatum.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum magni, placeat expedita aut fuga obcaecati dignissimos quaerat illum id sapiente suscipit vel aperiam, qui saepe eos alias est, quidem voluptatum.\
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, facilis ducimus rem cumque ullam eligendi molestias modi, illum minima commodi totam libero? Inventore, et. Numquam odit eligendi adipisci praesentium corrupti.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi modi neque ab veniam laudantium dolorum aut possimus esse necessitatibus quo. Eveniet praesentium quibusdam harum iste quos saepe fuga blanditiis alias?
+        </div>
+        <hr>
+        <div class="script script1">
+            <h1>documnet.write('');</h1>
+            <script>
+                document.write('hello world');
+                document.write(1+1);
+            </script>    
+        </div>
+        <div class="script script2">
+            <h1>JS Keydown event attribute</h1>
+            <h2>alert</h2>
+            <h3>onclick</h3>
+            <h3>onchange</h3>
+            <input type="button" value="Hi" onclick="alert('hi')">
+            <input type="text" onchange="alert('changed')">
+        </div>
+        <div id="script3" class="script script3">
+            <input type="button" value="alert" onclick="Dialog1()">
+            <input type="button" value="confirm" onclick="Dialog2()">
+            <div id="test1"></div>
+            <script>
+                function Dialog1(){
+                    alert('asdf');
+                }
+                function Dialog2(){
+                    let str;
+                    if(confirm('확인 또는 취소를 누르시오.')===true){
+                        str="확인!";
+                    }else{
+                        str="취소!";
+                    }
+                    document.getElementById('test1').innerHTML=str;
+                }
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>
