@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>6장 주소록예제</title>
+    <style>
+        .input,.output{
+            padding-bottom: 5%;
+            margin-bottom: 3%;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">실습</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">주소록예제</p>
+            <div class="ex ex1">
+                <form class="input">
+                    <!-- 이름 -->
+                    <label for="name">이름:</label>
+                    <input type="text" id="name"><br>
+                    <label for="tel">전화번호:</label>
+                    <input type="text" id="tel">
+
+                </form>
+                <form class="output">
+                    <!-- 전화번호 -->
+                    <input type="button" value="저장" onclick="save1()">
+                    <input type="button" onclick='reset1()' value='리셋'>
+                    <input type='button' value="배경화면 전환" onclick="change1()">
+                </form>
+                <div class="list">
+                    <h3>주소록 목록</h3>
+                    <ul class="addrlist">
+
+                    </ul>
+                </div>
+            </div>
+            <script>
+                
+                function save1(){
+                    let addrlist = document.querySelector('.addrlist');
+                    let useraddr = document.getElementById('name').value + ' , ' +
+                    document.getElementById('tel').value;
+                    let txt = document.createTextNode(useraddr);
+                    let list = document.createElement('li');
+                    list.appendChild(txt);
+                    addrlist.appendChild(list);
+                    alert(useraddr);
+                }
+                function reset1(){
+                    let addrlist = document.querySelector('.addrlist');
+                    addrlist.textContent=' ';
+                    
+                }
+                let count=1;
+                function change1(){
+                    let practice = document.querySelector('.practice1');
+                    
+                    if(count===1){
+                        practice.setAttribute('style','background:yellowgreen');
+                        count++;
+                    }else{
+                        practice.setAttribute('style','background:white');
+                        count=1;
+
+                    }
+                }
+            </script>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">주제2</p>
+            <div class="ex ex2">
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">주제3</p>
+            <div class="ex ex3">
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>
