@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../STYLE/CSS파일2.css"> -->
+    <title>JavaScript</title>
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .home {
+            position: fixed;
+            right: 5%;
+            bottom: 0;
+            padding: 5%;
+        }
+        .home > a {
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #0069c0;
+            border-radius: 50%;
+            background: #0069c0;
+            padding: 30%;
+            box-shadow: 0.5rem 0.5rem 15px rgba(0, 0, 0, 0.5);
+        }
+        .home > a:hover {
+            color: brown;
+            font-size: 1.2rem;
+        }
+        .header{
+            background: thistle;
+            display: flex;
+            width: 100%;
+            padding: 5% 0;
+            font-size: 5rem;
+            justify-content: center;
+        }
+        .tab{
+            /* display: flex;
+             */
+             float: left;
+            background: #555;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 5% ;
+            width: 20%;
+            font-size: 1rem;            
+        }
+        .tab:hover{
+            background: #777;
+        }
+
+        .bt_event{
+            color: white;
+            display: none;
+            padding: 50px;
+            background: thistle;
+            width: 100%;
+            padding: 5% 0;
+            font-size: 5rem;
+            text-align: center;
+        }
+        #Home{background: tomato;}
+        #HTML{background: darkolivegreen;}
+        #CSS{background: dodgerblue;}
+        #JavaScript{background: orange;}
+        #DataBase{background: orchid;}
+    </style>
+    <script>
+        function openMenu(target,seltab,color){
+            
+            let header=document.querySelector('.header');
+            header.setAttribute('style','display:none');
+
+            //let bt_event = document.querySelector('.bt_event');
+            //bt_event1.setAttribute('style','display:block');
+
+            //let select = document.querySelector('.tab');
+            //select.setAttribute('style','background:tomato');
+           
+            //let bt_event1 = document.getElementsByClassName('tab')[1].value;
+            let str = '#'+target;
+            let seltab1 = document.querySelector(str);
+            seltab1.setAttribute('style','display:block'); 
+            let x= document.querySelector('seltab');
+            seltab.setAttribute('style','background:color'); 
+            alert(seltab.value);
+        }
+    </script>
+</head>
+<body>
+    <!-- 홈으로 -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <!-- 헤더 -->
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <!-- 정보 -->
+    <div id="Home" class="bt_event">
+        <h1>Home</h1>
+        <p>Go to main Page.</p>
+    </div>
+    <div id="HTML" class="bt_event">
+        <h1>HTML</h1>
+        <p>Go to HTML Page.</p>
+    </div>
+    <div id="CSS" class="bt_event">
+        <h1>CSS</h1>
+        <p>Go to CSS Page.</p>
+    </div>
+    <div id="JavaScript" class="bt_event">
+        <h1>JavaScript</h1>
+        <p>Go toJavaScript Page.</p>
+    </div>
+    <div id="DataBase" class="bt_event">
+        <h1>DataBase</h1>
+        <p>Go to DataBase Page.</p>
+    </div>
+    <!-- 버튼 -->
+    <input type="button" value="Home" id='default' class="tab" onclick="openMenu('Home',this,'tomato')">
+    <input type="button" value="HTML" class="tab" onclick="openMenu('HTML',this,'darkolivegreen')">
+    <input type="button" value="CSS" class="tab" onclick="openMenu('CSS',this,'dodgerblue')">
+    <input type="button" value="JavaScript" class="tab" onclick="openMenu('JavaScript',this,'orange')">
+    <input type="button" value="DataBase" class="tab" onclick="openMenu('DataBase',this,'orchid')">
+    <!-- 목차 -->
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <!-- 초기화 -->
+    <div id="content" class="bt_event">
+        <!-- 실습 헤더 -->
+        <div class="실습">실습</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">주제1</p>
+            <div class="ex ex1">
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">주제2</p>
+            <div class="ex ex2">
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">주제3</p>
+            <div class="ex ex3">
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>

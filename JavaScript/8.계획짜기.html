@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../따라하기/css/bootstrap.css">
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>계획짜기</title>
+</head>
+<body>
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    <div class="container shadow mx-auto mt-5 p-5 w-70">
+        <h2>계획짜기</h2>
+        <hr>
+        <div class="input-group">
+            <input type="text" id="item" class="form-control" placeholder="계획 적기">
+            <button id="newBtn" type="button" class="btn btn-info" onclick="addItem()">입력</button>
+        </div>
+        <hr>
+        <ul id="todolist" class="list-group"></ul>
+    </div> 
+
+
+
+
+
+
+
+    <script>
+        function addItem(){
+            // ul요소
+            let todolist = document.querySelector('#todolist');
+            // li생성
+            let list=document.createElement('li');
+            // text요소
+            let doit= document.querySelector('#item');
+            // li요소에 들어갈 닫기 버튼 생성
+            let xbtn = document.createElement('button');
+            // 추가된 리스트의 클래스이름 생성
+            list.className='list-group-item list-group-item-action list-group-item-warning';
+            // 추가된 버튼의 클래스 이름 생성
+            xbtn.className='close';
+            // 버튼에 x표시
+            xbtn.innerHTML='&times;';
+
+            xbtn.onclick=function(e){
+                // 이벤트가 발생한 li 요소를 구해서 ul요소에서 제거
+                let pnode=e.target.parentNode;
+                todolist.removeChild(pnode);
+            }
+            // ul tag에 생성된 li를 추가시킨후 text에 적은 value값을 넣는다
+            todolist.appendChild(list);
+            list.textContent=doit.value;
+            // li에 버튼생성
+            list.appendChild(xbtn);
+
+            // 확인
+            alert(doit.value);
+            // 빈칸을 만들고 포커스
+            doit.value=' ';
+            doit.focus();
+
+
+
+        }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../따라하기/js/bootstrap.js" defer></script>
+</body>
+</html>
