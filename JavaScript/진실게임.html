@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>진실게임</title>
+    <style>
+        .ex1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #8eacbb;
+            width: 50%;
+            padding: 10% 0;
+            margin: auto;
+        }
+        #question{
+            background: #f4511e;
+            border: none;
+            height: 4rem;
+            width: 10rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            font-size: 2rem;
+            font-weight: bold;
+            
+        }
+        #question:hover{
+            color: cornsilk;
+            background: rosybrown;
+            border: 3px solid #ffff6b;
+            box-shadow: 10px 10px 10px rgba(7, 11, 228, 0.5);
+        }
+        .QNAlist{
+            list-style: none;
+            background: rosybrown;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">진실게임</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">진실게임</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">질문생성</p>
+            <div class="ex ex1">
+                <input id="question" type="button" value="질문생성" onclick="quest()">
+
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">질문</p>
+            <div class="ex ex2">
+                <ul class="quest_list">
+
+                </ul>
+            </div>
+        </div>
+        
+
+
+
+    </div>
+    <script>
+        // 질문
+        let QNA = [
+            '앞므로 우리 기념일을 어떻게 챙기면 좋을까?',
+            '남사친/여사친과 어느 정도 사이로 지내는게 좋을까?',
+            '일주일에 혼자만의 시간이 며칠이나 필요할까?',
+            '올해 같이 해보고 싶은 일과 이유는?',
+            '자신의 장점 3가지 말해보기',
+            '자신의 단점 3가지 말해보기',
+            '연애하면서 가장 스트레스받는 3가지는?',
+            '연애하면서 상대방이 꼭 지켜주었으면 하는 것 한가지 말하기.',
+            '가장 기억에 남는 순간은?',
+            '나는 어떤 사람인지 5글자로 말하고 이유까지 설명하기.',
+            '우리의 공통점 3가지 말해보기.',
+            '우리의 차이점 3가지 말해보기.',
+            '자신의 고민 1가지 말하기.',
+            '최근, 가장 행복한순간과 불행한 순간 1가지씩 말하기.',
+            '같이 무엇을 할때가 가장 좋은지 이야기하기.',
+            '같이 무슨 주제로 이야기할 때 재밌는지 말하기.',
+            '같이 갔던 곳중 최악,최고 말하기.',
+            '연애중에 다른 사람이 눈에 들어온 적이 있나요?',
+            '상대방에게 가장 고마웠던일은 무엇인가요?',
+            '상대방에게 가장 미안했던 일은 무었인가요?',
+            '상대방이 연인이어서 좋은점 3가지 말해보기.',
+            '상대방이 했던 말중 가장 상처받았던 말은 무엇인지 1가지 말해보기.',
+            '앞으로 가장 하기 싫은 데이트는 무엇인가요?'
+        ];
+        // 했던 질문을 저장하는 배열
+        let recall = [];
+        // 카운트
+        let count=0;
+        // 버튼변수
+        let btn= document.querySelector('#question');
+        // 중복시 실행되는 함수 210421 만들어봄 실행 ㄴㄴ
+        let double = function(){
+            for(let i=0;i<recall.length;i++){
+                if(ran===recall[i]){
+                    double;
+                    return;
+                }
+            }
+        }
+        // 질문리스트 변수
+        const quest_list = document.querySelector('.quest_list');
+        // 리스트생성
+        const list = document.createElement('li');
+        quest_list.appendChild(list);
+        // 리스트 클래스네임
+        list.className='QNAlist'
+
+        for(let i=0;i<QNA.length;i++){
+            
+        }
+        function quest(){
+
+            let ran=Math.floor(Math.random()*QNA.length); 
+
+            // 중복방지           
+            for(let i=0;i<recall.length;i++){
+
+                if(ran===recall[i]){
+                    //alert(i+'번째와' + (recall.length+1) + '번쨰 : 같은 문장');
+                    //btn.onclick=quest();   
+
+                    //210421 중복값인 경우 랜덤변수 초기화를 위해 재호출을 한뒤 현재 함수 종료
+                    quest();
+                    return;                    
+                    } 
+
+                if(recall.length===QNA.length){
+                    alert('질문이 다 떨어졌어요..');
+                    return;
+                }
+                    
+
+                    /*
+                    btn.click();
+                    break;
+                    return;
+                    */
+                
+                count=i+1;
+                }
+
+            recall.push(ran);
+
+            //출력
+            /*for(let i=0;i<recall.length;i++){
+                console.log(recall[i] );
+            }*/
+
+            //console.log((count+1) + '번째');
+            //alert(QNA[ran]);
+            // 리스트에 질문 추가
+            list.textContent=QNA[ran];
+            //alert(recall.length + '\n ' + QNA.length);
+        }
+        
+
+
+    </script>
+</body>
+</html>
