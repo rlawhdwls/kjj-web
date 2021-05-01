@@ -19,28 +19,32 @@ body {
   z-index: -1;
 }
 .header {
-  margin: 0auto;
+  margin: 0 auto;
   padding-top: 10%;
   font-size: 5rem;
   font-weight: bold;
   text-align: center;
 }
 .content1 {
-  margin: 5% auto;
+  padding-top: 5%;
+  margin: 0 auto;
   width: 50%;
+}
+.content2 {
+  padding-top: 5%;
 }
 .js-clock {
   font-size: 3rem;
   text-align: center;
 }
 .nav-ul {
-  margin: 5% auto;
+  margin: 0 auto;
   text-align: center;
   font-size: 1.5rem;
   width: 30%;
   line-height: 2;
   color: black;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.5);
 }
