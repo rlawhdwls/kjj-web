@@ -8,6 +8,7 @@
 }
 body {
   background-size: 100%;
+  overflow: hidden;
 }
 .bgImg {
   position: absolute;
