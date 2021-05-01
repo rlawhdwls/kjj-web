@@ -5,19 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    
     <title>진실게임</title>
     <style>
+        .content{
+            font-family: 'Nanum Myeongjo';
+        }
+        .practice1{
+            transform: scale(1,.8);
+        }
         .ex1{
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #8eacbb;
+            /* background: #8eacbb; */
             width: 50%;
             padding: 10% 0;
             margin: auto;
         }
         #question{
-            background: #f4511e;
+            background: white;
             border: none;
             height: 4rem;
             width: 10rem;
@@ -26,20 +36,51 @@
             position: relative;
             font-size: 2rem;
             font-weight: bold;
-            
+            font-family: 'Nanum Myeongjo';
         }
         #question:hover{
             color: cornsilk;
-            background: rosybrown;
+            background: red;
             border: 3px solid #ffff6b;
             box-shadow: 10px 10px 10px rgba(7, 11, 228, 0.5);
         }
+        @keyframes myani{
+            from{
+                background-color: white;
+                font-size: .5rem;
+                font-weight: lighter;
+                width: 0%;
+                height: 5rem;
+                overflow: hidden;
+                display: block;
+            }
+            to{
+                background-color: yellow;
+                font-size: 2rem;
+                font-weight: bold;
+                width: 100%;
+                height: 5rem;
+                overflow: hidden;
+                display: block;
+                
+            }
+        }
+
+
+
+
+        .quest_list{
+            list-style: none;
+        }
         .QNAlist{
             list-style: none;
-            background: rosybrown;
-            font-weight: bold;
-            font-size: 2rem;
-            text-align: center;
+            animation-name: myani;
+            animation-duration: 5s;
+        }
+        
+        
+        .subject{
+            color: #111;
         }
     </style>
 </head>
@@ -111,6 +152,80 @@
             '상대방이 했던 말중 가장 상처받았던 말은 무엇인지 1가지 말해보기.',
             '앞으로 가장 하기 싫은 데이트는 무엇인가요?'
         ];
+        let QNA2=[
+            '본인했던순간은?',
+            '가장 큰 성취감이생각하는 완벽한하루란?',
+            '인생에서 가장감사을 이룬때는언제인가?',
+            '본인의 가장소중한 기억은?',
+            '상대방의 성격중 가장 긍정적으로 생각하는3가지',
+            '상대방이 여자친구,남자친구여서좋은점3가지',
+            '절대 농담으로 넘어갈수없는말이 있다면?',
+            '상대방이 갑자기 일년간연락두절이된다면?',
+            '제일좋아하는스킨십 그이유는?',
+            '상대방의 무슨모습을보고 반했나요?',
+            '상대방의 마음을 얻기위해 뭘했나요?',
+            '연애상대를택할때 제일중요한것3가지',
+            '일주일동안뽀뽀금지령 실천할수있나요?',
+            '상대가해준말중 제일설렜던 말은?',
+            '노력해도 고치기힘든 습관은 뭔가요?',
+            '상대방이 고쳤으면하는행동3가지',
+            '자신이가장 나답다고느껴질때가 언제인가요?',
+            '내애인 자랑거리3가지말하기',
+            '상대방이 섹시하게느껴졌던순간은?',
+            '나는 상대방에게 어떤존재가되고싶나요?',
+            '요즘우리의 애정지수는 몇프로라고생각해?',
+            '자신이 제일 바보같았던 순간은?',
+            '상대방에게 서운했던점 3가지',
+            '상대방에게 실망한순간 1가지말하기',
+            '상대방에게 사랑받는거같다고느꼈던순간은?',
+            '상대방이 당신에대해 꼭알아줬으면하는것은?',
+            '10만원으로알차게 뭘할것인가?',
+            '은밀한취향이 무엇인가',
+            '우리첫키스어땠어?',
+            '상대방과오래오래함께하고싶다는 순간은?',
+            '우리의 사랑과 제일잘어울리는과일은?이유도',
+            '상대방에게 배울점3가지',
+            '상대방에게 부러운점 3가지',
+            '진심으로 미안했지만 제대로사과하지못했던일',
+            '내인생에서 가장 큰 영향을 준사람',
+            '대방이랑 같이하고싶은 취미',
+            '지금 이순간 듣고싶은말은?',
+            '상대방의 빈자리가 유독 크게느껴질때 3가지',
+            '본인이정말 콩깍지가 씌였구나라고느껴질때는?',
+            '상대방에게 해주고싶은말이있다면?',
+            '우리 두사람에게 가장필요한게있다면?',
+            '함께한날중에 소중했던 추억 3가지',
+            '상대방이제일보고싶을때는?',
+            '상대방이 무슨행동을할때가장행복한가요',
+            '제일짜증났던싸움3가지',
+            '상대방이 하는행동중 이해안갔던행동 2가지',
+            '뽀뽀하고싶을때는 언제인가요?',
+            '돈쓰는게 아깝다고느낀적이 단한번이라도있나요?',
+            '상대가해줬던 음식중에 제일기억에남는거',
+            '상대방에게 배신감을 느꼈던적이있나요?'
+        ];
+        let QNA3=[
+            '권태기가온적이있나요?'
+            ,'상대에게 싫증난적이있나요?'
+            ,'상대방이 만나지말았으면하는사람'
+            ,'상대방이 미운적이 있었나?언젠지왜그랬는지말하기'
+            ,'질투났던적 3가지'
+            ,'상대방이 이뻐보였던적 (구체적설명)'
+            ,'상대방이 더럽다고 느껴진적 '
+            ,'데이트하기 싫었던적'
+            ,'상대방이 창피했던적'
+            ,'상대방에게 받았던선물중에제일좋았던거'
+            ,'손잡기,팔짱 뭐가더좋아?'
+            ,'상대방이 나보다밑이라는생각을한적있다없다'
+            ,'나를정말 좋아하는구나라고 느꼈을때언젠지'
+            ,'상대방이랑 바꿀수있는것'
+            ,'우리가결혼하면 애기는몇명이괜찮은지'
+            ,'신혼여행은 어디로가고싶은지'
+            ,'결혼하면 애칭은 뭘로할건지'
+            ,'상대가 자신의취미를강요한다면?'
+            ,'연락이 너무잘되는거,너무안되는거뭐가나아'
+            ,'커플아이템중에 뭐가제일 나은지'        
+        ];
         // 했던 질문을 저장하는 배열
         let recall = [];
         // 카운트
@@ -129,10 +244,10 @@
         // 질문리스트 변수
         const quest_list = document.querySelector('.quest_list');
         // 리스트생성
-        const list = document.createElement('li');
+        let list = document.createElement('li');
         quest_list.appendChild(list);
         // 리스트 클래스네임
-        list.className='QNAlist'
+        list.className='QNAlist1';
 
         for(let i=0;i<QNA.length;i++){
             
@@ -178,7 +293,11 @@
             //console.log((count+1) + '번째');
             //alert(QNA[ran]);
             // 리스트에 질문 추가
-            list.textContent=QNA[ran];
+            // list.textContent=QNA[ran];
+            list.className='QNAlist';
+
+            list.textContent=QNA[ran]
+
             //alert(recall.length + '\n ' + QNA.length);
         }
         
@@ -187,3 +306,6 @@
     </script>
 </body>
 </html>
+
+
+<!-- 1. 키워드 만들기 -->

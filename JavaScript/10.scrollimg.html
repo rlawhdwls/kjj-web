@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <title>JavaScript</title>
+    <style>
+        .box1>img{
+            width: 7rem;
+            height:7rem;
+        }
+
+        @keyframes animation{
+            from{
+
+            }
+            to{
+                transform: translateX(5%);
+            }
+        }
+        .box1{
+            background-color: #111;
+            width: 30%;
+            height: 7rem;
+            margin: 0 auto;
+
+            
+            /* overflow: hidden;  */
+            /* 부모영역을 벗어나 일자로 만듬 */
+            white-space: nowrap;
+            
+        }
+        .scroll{
+            animation-name: animation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            transform: translateX(-28rem);
+        }
+        .fas{
+            transform: scale(3,3);            
+        }
+        .fas1{
+            background-color: brown;
+            position: relative;
+            bottom: 4.5rem;
+            left: 20%;
+        }
+        .fas2{
+            background-color: rgb(63, 21, 214);
+            position: relative;
+            bottom: 4.5rem;
+            left: 80%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">실습</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">주제1</p>
+            <div class="ex ex1">
+                <div class="box1">
+                    <img class="scroll scroll1" src="../img/라이언.gif" alt="">
+                    <img class="scroll scroll2" src="../img/피치.jpg" alt="">
+                    <img class="scroll scroll3" src="../img/라이언.gif" alt="">
+                    <img class="scroll scroll4" src="../img/피치.jpg" alt="">    
+                </div>
+
+                <div class="box_btn">
+                    <i class="fas fas1 fa-angle-left"></i>
+                    <i class="fas fas2 fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">주제2</p>
+            <div class="ex ex2">
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">주제3</p>
+            <div class="ex ex3">
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+    <script>
+        let scroll = document.querySelector('#scroll');
+    </script>
+</body>
+</html>
