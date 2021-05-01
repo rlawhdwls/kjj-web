@@ -1,5 +1,4 @@
 const clock = document.querySelector('.js-clock');
-console.log('asdf')
 function Clock_play(){
     const date = new Date();
     const hour = date.getHours();

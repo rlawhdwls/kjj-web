@@ -78,13 +78,13 @@
                 todolist.removeChild(pnode);
             }
             // ul tag에 생성된 li를 추가시킨후 text에 적은 value값을 넣는다
-            todolist.appendChild(list);
             list.textContent=doit.value;
+            todolist.appendChild(list);
+
             // li에 버튼생성
             list.appendChild(xbtn);
 
             // 확인
-            alert(doit.value);
             // 빈칸을 만들고 포커스
             doit.value=' ';
             doit.focus();
