@@ -69,10 +69,11 @@ a {
   position: absolute;
   font-size: 1.5rem;
 }
-.wrap > li > a:hover {
-  color: brown;
-  font-size: 2rem;
-  font-weight: bold;
+.nav-ul > li > a:hover {
+  transition-duration: 1s;
+  transition-property: all;
+  font-size: 3rem;
+  text-shadow: 10px 10px 10px rgba(224, 140, 203, 0.966);
 }
 .content > h1 {
   display: flex;
@@ -98,4 +99,6 @@ button:hover {
   width: 120px;
   color: brown;
   background: cadetblue;
+  transition-duration: 1s;
+  transition-property: all;
 }

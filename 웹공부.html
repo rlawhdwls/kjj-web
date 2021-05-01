@@ -12,6 +12,7 @@
             WEB
         </div>
             <ul class="nav-ul">
+                <li><a href="Home.html">MultiWeb</a></li>
                 <li><a href="HTML목차.html">HTML</a></li>
                 <li><a href="CSS목차.html">CSS</a></li>
                 <li><a href="JavaScript.html">JavaScript</a></li>
@@ -35,7 +36,24 @@
                 </div>
             
         </div>
-     
+        <div class="content2">
+
+            <div class="ex1"></div>
+            <div class="ex2"></div>
+            <div class="ex3"></div>
+            <div class="ex4"></div>
+            <input type="button" value="실험" class="실험" onclick="test()">
+        </div>
         
+
+        <script>
+            let btn = document.querySelector('.실험');
+            function test(){
+                btn.style.transform='scale(2,2)';
+                btn.style.transition-property('all');
+                btn.style.transition-duration('3s');
+
+            }
+        </script>
     </body>
 </html>

@@ -37,7 +37,10 @@ a {
   padding-left: 2rem;
 }
 .nav-ul > li > a:hover {
+  transition-duration: 1s;
+  transition-property: all;
   font-size: 3rem;
+  text-shadow: 10px 10px 10px rgba(224, 140, 203, 0.966);
 }
 .content1 {
   display: flex;
@@ -71,4 +74,34 @@ button {
   margin-top: 5%;
   margin-left: 5%;
   width: 90%;
+}
+.content2 {
+  background: #999;
+  width: 80%;
+  margin: 5% auto;
+}
+.ex1 {
+  background: red;
+  width: 5rem;
+  height: 5rem;
+  /* transform: scale(2, 2); */
+}
+
+.ex1:active {
+  transform: scale(2, 2);
+  transition-property: all;
+  transform: translate(100%);
+  transition-duration: 1s;
+}
+.ex2 {
+}
+.ex3 {
+}
+.ex4 {
+}
+.실험 {
+  border: none;
+  background: #f8bbd0;
+  width: 5rem;
+  height: 5rem;
 }
