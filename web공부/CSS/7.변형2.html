@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>CSS</title>
+    <style>
+        img{
+            margin: 3%;
+            width: 10rem;
+            height: 10rem;
+        }
+        .origin1{
+            transform-origin: 0% 0%;
+            transform: rotate(45deg)
+        }
+        .origin2{
+            transform-origin: 100% 100%;
+            transform: rotate(45deg)
+        }
+        .preserve{
+            transform-style: preserve-3d ;
+            transform: rotate(45deg) translate(5rem,30rem);
+        }
+        
+        .pers1{
+            position: relative;
+            perspective: 100%;
+            transform: rotatex(45deg); 
+        }
+        .pers2{
+            transform: rotatex(45deg);
+        }
+        .ex3{
+            background: rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">그외의 변형</div>
+
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">Transform-origin</p>
+            <div class="ex ex1">
+                transform의 변형 기준점을 지정하는 속성<br>
+                <img src="../img/라이언.gif" alt="" class="origin1">
+                <label for="origin1">0% 0% 왼쪽기준 회전</label>
+
+                <img src="../img/라이언.gif" alt="" class="origin2">
+                <label for="origin2">100% 100% 오른쪽기준 회전</label>
+
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">tranform-style</p>
+            <div class="ex ex2">
+                3D공간에서 변경된 3차원 좌표를 하위 요소에게 전달할 것인지의 여부 결정. <br>
+                속성값 중 flat을 지정할 경우 하위 요소들은 모두 2D영역에 표시 <br>
+                preserve-3d를 지정할 경우 부모 요소의 3D좌표를 전달받아 3D형태로 표현<br>
+                <div class="preserve">
+                    <img src="../img/라이언.gif" alt="" class="style1">
+                    <label for="style1">style - preserve-3d</label>    
+                </div>
+
+                <img src="../img/라이언.gif" alt="" class="style2">
+                <label for="style2">기본</label>
+
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">Perspective</p>
+            <div class="ex ex3">
+                3D공간에서 요소와 관측 점과의 거리, 즉 원근감을 지정하는 속성이다. <br>
+
+                <img src="../img/라이언.gif" alt="" class="pers1">
+                <label for="pers1">Perspective 적용</label>
+
+                <img src="../img/라이언.gif" alt="" class="pers2">
+                <label for="pers2">기본</label>
+
+                
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+        <div class="practice practice5">
+            <p class="subject subject5">주제5</p>
+            <div class="ex ex5">
+            </div>
+        </div>
+        <div class="practice practice6">
+            <p class="subject subject6">주제6</p>
+            <div class="ex ex6">
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>

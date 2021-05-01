@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>3.CSS텍스트</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS파일1.css">
+        <style>
+			.none {
+				text-transform : none ;
+			}
+			.capitalize {
+				text-transform : capitalize ;
+			}
+			.uppercase {
+				text-transform : uppercase ;
+			}
+			.lowercase {
+				text-transform : lowercase ;
+			}
+			.full-width {
+				text-transform : full-width ;
+            }
+         
+			.nor{
+                white-space : normal ;
+                width : 300px ;
+				border : 3px solid #000 ;
+            }
+            .pre{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre ;
+			}
+			.nowrap{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : nowrap ;
+			}		
+			.pre-wrap{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre-wrap ;
+			}
+			.pre-line{
+                width : 300px ;
+				border : 3px solid #000 ;
+				white-space : pre-line ;
+			}
+            
+			.auto {
+                line-break : auto ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.loose {
+                line-break : loose ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.normal2 {
+                line-break : normal ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+			}
+			.strict {
+                line-break : strict ;
+                border : 3px solid #f00 ;
+				width : 300px ;
+            }      
+		
+			.normal {
+				word-break : normal ;
+				border : 3px solid #f00 ;
+				width : 200px ;
+			}
+			.keep-all {
+				word-break : keep-all ;
+				border : 3px solid #f00 ;
+				width : 200px ;
+			}
+			.break-all {
+				word-break : break-all ;
+				border : 3px solid #f00 ;
+				width : 200px ;
+            }
+          
+			
+			.auto3 {
+				-webkit-hyphens : auto  ;
+				border : 3px solid #f00 ;
+				width : 230px ;
+			}
+			.manual3 {
+				-webkit-hyphens : manual ;
+				border : 3px solid #f00 ;
+				width : 230px ;
+			}
+			.none3 {
+				-webkit-hyphens : none ;
+				border : 3px solid #f00 ;
+				width : 230px ;
+			}
+           
+			.normal01 {
+				overflow-wrap : normal ;
+				border : 3px solid #f00 ;
+				background :#ffc ;
+				width : 150px ;
+				padding : 10px  ;
+			}
+			.word-break01 {
+				overflow-wrap : break-word ;
+				border : 3px solid #f00 ;
+				background :#ffc ;
+				width : 150px ;
+				padding : 10px  ;
+			}
+			.normal02 {
+				word-wrap : normal ;
+				border : 3px solid #f00 ;
+				background :#ffc ;
+				width : 150px ;
+				padding : 10px  ;
+			}
+			.word-break02 {
+				word-wrap : break-word ;
+				border : 3px solid #f00 ;
+				background :#ffc ;
+				width : 150px ;
+				padding : 10px  ;
+			}
+            
+		
+			.left4{
+				text-align : left ;
+				padding : 1em ;
+				border : 3px solid #ff0000 ;
+			}
+			.center4{
+				text-align : center ;
+				padding : 1em ;
+				border : 3px solid #ff0000 ;
+			}
+			.right4{
+				text-align : right ;
+				padding : 1em ;
+				border : 3px solid #ff0000 ;
+			}
+			.justify4{
+				text-align : justify ;
+				padding : 1em ;
+				border : 3px solid #ff0000 ;
+			}
+            
+			.decoration01 {
+				text-decoration-line : underline ;
+				text-decoration-style : dashed ;
+				text-decoration-color : #f00 ;
+			
+			}
+			.decoration02 {
+				text-decoration : line-trough dotted #00f ;
+			}
+		
+         
+			.shadow01 {
+				text-shadow : 5px 5px 10px rgba(0,0,0,0.8) ;
+				color : rgb( 5,77,74) ;
+				font-weight : bold ;
+				font-size : 80px ;
+				font-family : Helvetica, Arial, sans-serif ;
+				margin : 30px ;
+			}
+			.shadow02 {
+				text-shadow : 1px 5px 7px rgb(231,231,231), 0 0 0 rgba( 5,77,74,0.8), 1px 5px 7px rgb(231,231,231) ;
+				color : rgb( 5,77,74) ;
+				font-weight : bold ;
+				font-size : 80px ;
+				font-family : Helvetica, Arial, sans-serif ;
+				margin : 30px ;
+			}
+			.shadow03 {
+				text-shadow : 1px 0px 0px #000, 0px 1px 0px #000, -1px 0px 0px #000, 0px -1px 0px #000, 2px 0px 0px #000, 0px 2px 0px #000, -2px 0px 0px #000, 0px -2px 0px #000 ;
+				color : rgb( 5,77,74) ;
+				font-weight : bold ;
+				font-size : 80px ;
+				font-family : Helvetica, Arial, sans-serif ;
+				margin : 30px ;
+			}
+			.shadow04 {
+				text-shadow : 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000, 4px 4px 0px #000, 5px 5px 0px #000 ;
+				color : rgb( 5,77,74) ;
+				font-weight : bold ;
+				font-size : 80px ;
+				font-family : Helvetica, Arial, sans-serif ;
+				margin : 30px ;
+			}
+	
+		
+		</style>
+    </head>
+    <body>
+        <button onclick="window.location.href='웹공부.html'">홈으로</button>
+        <header>
+            CSS텍스트
+        </header>
+
+        <div id="wrap">
+            <nav>
+                <ul>
+                    <li><h1><a href="HTML목차.html">HTML</a></h1></li>
+                    <li><h1><a href="CSS목차.html">CSS</a></h1></li>
+                    <li><h1><a href="중국어/중국어.html">중국어</a></h1></li>
+    
+                </ul>
+            </nav>
+    
+            <main>
+                <div class="content">
+                    <p id="menu">텍스트(Text)</p>
+                    <p id="des">
+                        텍스트 관련 속성은 Text Module Level 3 에서 정의하고 있으며, 기존에 제공되던 속성 이외에 하이폰(-) 및 구두점(.)과
+                        탭 크기 지정 등의 속성이 추가 되었다.
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">text-transform</p>
+                    <p id="des">
+                        text-transform은 텍스트의 대소 문자를 변환하기 위한 속성으로, 모두 대문자로 변환하는 uppercase,
+                        모두 소문자로 변환하는 lowercase, 그리고 단어의 첫글자를 대문자로 변환하는 capitalize 값과 함께 CSS3에서 full-width값이 추가되었다.
+                        
+                        <h1>text-transform 속성</h1>
+                        <p class="none">
+                            연습글자( abcd ) - text-transform : none;
+                        </p>
+                        <p class="capitalize">
+                            연습글자( abcd ) - text-transform : capitalize;
+                        </p>
+                        <p class="uppercase">
+                            연습글자( abcd ) - text-transform : uppercase;
+                        </p>
+                        <p class="lowercase">
+                            연습글자( abcd ) - text-transform : lowercase;
+                        </p>
+                        <p class="full-width">
+                            연습글자( abcd ) - text-transform : full-width;
+                        </p>
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">white-space</p>
+                    <p id="des">
+                        white-space는 텍스트의 공백과 줄바꿈의 처리 방법을 지정하는 속성으로, 다음과 같은 값을 가지고 있다.
+                        <ul>
+                            <li>normal - 텍스트의 공백은 병합되고 줄바꿈은 무시되며, 요소의 너비에 따라 자동으로 줄바꿈된다.</li>
+                            <li>pre - 텍스트의 공백과 줄바꿈을 그대로 표시하며, 요소의 너비에 따른 자동 줄바꿈은 적용되지 않는다.</li>
+                            <li>nowarp - 텍스트의 공백은 병합되고 줄바꿈은 무시되며, 요소의 너비에 따른 자동 줄바꿈도 적용되지 않는다. 그러므로 이 속성 값이 지정된 텍스트는 한 줄로 표시된다.</li>
+                            <li>pre-wrap - 텍스트의 공백과 줄바꿈이 그대로 표시되고, 요소의 너비에 따른 자동 줄바꿈도 적용된다.</li>
+                            <li>pre-line - 텍스트의 공백은 병합되지만 줄바꿈은 그대로 표시되며, 요소의 너비에 따른 자동 줄바꿈도 적용된다.</li>
+                        </ul>                        
+                        <h1>white-space 속성</h1>
+                        <p class="nor">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - normal
+                        </p>
+                        <p class="pre">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre
+                        </p>
+                        <p class="nowrap">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - nowrap
+                        </p>
+                        <p class="pre-wrap">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre-wrap
+                        </p>
+                        <p class="pre-line">
+                            이 단락에는 white-space 속성이 지정되어 있습니다. - pre-line
+                        </p>        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">line-break</p>
+                    <p id="des">
+                        
+                        line-break는 요소 내 줄바꿈 규칙을 지정하는 속성으로, 일반적인 줄바꿈 규칙은 normal 값이면 엄격한
+                        줄바꿈 규칙을 적용할 경우 strict 값을, 줄바꿈 규칙을 최소화할 경우 loose를 사용한다.
+                        모든 요소의 line-break 속성의 기본 값은 auto이며 auto는 사용자 에이전트에 다라 줄바꿈 규칙을 적용한다.
+                        <h1>line-break 속성</h1>
+                        <p class="auto">
+                            이 단락에는 line-break 속성값이 auto로 적용되었습니다.
+                        </p>
+                        <p class="loose">
+                            이 단락에는 line-break 속성값이 loose로 적용되었습니다.
+                        </p>
+                        <p class="normal2">
+                            이 단락에는 line-break 속성값이 normal로 적용되었습니다.
+                        </p>
+                        <p class="strict">
+                            이 단락에는 line-break 속성값이 strict로 적용되었습니다.
+                        </p>            
+                        
+                        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">word-break</p>
+                    <p id="des">
+                        work-break는 줄바꿈을 위한 단어 규칙을 지정하는 속성이다. 기본적으로 단어는 공백을 기준으로
+                        줄바꿈이 되지만 공백이 없이 텍스트를 입력한 경우 요소 박스의 크기를 넘치는 경우 하나의 단어로 인식하기 때문에 줄바꿈이 적용되지 않는다.
+                        이때, word-break 속성을 사용하여 줄바꿈 규칙을 지정할 수 있다.
+                     
+                        <h1>word-break 속성</h1>
+                        <p class="normal">
+                            이 단락에는 word-break 속성값이 normal로 적용되었습니다.
+                        </p>
+                        <p class="keep-all">
+                            이 단락에는 word-break 속성값이 keep-all로 적용되었습니다.
+                        </p>
+                        <p class="break-all">
+                            이 단락에는 word-break 속성값이 break-all로 적용되었습니다.
+                        </p>
+                    
+                  
+                
+                        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">hyphens</p>
+                    <p id="des">
+                        hyphens 속성은 줄바꿈으로 인해 단어가 나누어질 떄 하이픈을 자동으로 삽입하는 방식을 지정한다. 이때 기본 값인
+                        manual은 하이픈이 지정된 경우에만 하이픈을 적용하고, none은 하이픈을 삽입하지 않는다.
+
+                        
+                        <h1>hyphens 속성</h1>
+                        <p class="auto3">
+                            Any­thing and every­thing, regard­less of re­con­diteness! (NOTE: in this case, the CSS requires hyphenation hints to be ignored.)
+                        </p>
+                        <p class="manual3">
+                            Any­thing and every­thing, re­gard­less of re­con­diteness! (NOTE: in this case, the CSS requires hyphenation hints to be ignored.)
+                        </p>
+                        <p class="none3">
+                            Any­thing and every­thing, re­gard­less of re­con­diteness! (NOTE: in this case, the CSS requires hyphenation hints to be ignored.)
+                        </p>
+                    
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">overflow-wrap/word-wrap</p>
+                    <p id="des">
+                        
+                        overflow-wrap 속성과 word-wrap 속성은 동일한 속성이다. 이 두 속성은 단어가 요소 박스의 너비보다 길어질 경우 자동 줄바꿈이 발생하는데 이때 단어를 나눌지의 여부를 지정하는
+                        속성이다. overflow-wrap 속성과 word-wrap속성을 적용하여 단어를 나눌지의 여부를 지정할 때는 white-space속성 값이 자동 줄바꿈이 허용되도록 지정해야 한다.
+                        <br>normal - 단어가 요소 박스의 크기를 넘쳐도 줄바꿈을 허용하지 않는다.
+                        <br>break-word - 단어가 요소 박스의 크기를 넘칠 경우 줄바꿈을 적용한다.
+                      
+                        <h1>overflow-wrap/word-wrap 속성</h1>
+                        <p class="normal01">
+                            overflow-wrap 속성의 값을 normal로 지정하였습니다.
+                                    </p>
+                        <p class="word-break01">
+                            overflow-wrap 속성의 값을 break-word로 지정하였습니다.
+                        </p>
+                        <p class="normal02">
+                            word-wrap 속성의 값을 normal로 지정하였습니다.
+                        </p>
+                        <p class="word-break02">
+                            FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsgesetzes und straßenverkehrsrechtlicher Vorschriften)
+                        </p> 
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">text-align</p>
+                    <p id="des">
+                      
+                        text-align은 단락 내 텟스트의 가로 방향 정렬 방법을 지정하는 속성이다. 속성 값 중 left, right, center, justify, [striong]은 CSS2.1에서도 정의된 속성 값이었으며, 나머지 속성 값은 CSS3에서 추가된 것이다.
+                        <ul>
+                            <li>start - 박스의 시작점으로 텍스트를 정렬한다.</li>
+                            <li>end - 박스의 종료점을 기준으로 텍스트를 정렬한다.</li>
+                            <li>left - 박스의 왼쪽을 기준으로 텍스트를 정렬한다.</li>
+                            <li>right - 박스의 오른쪽을 기준으로 텍스트를 정렬한다.</li>
+                            <li>center - 박스의 중앙을 기준으로 텍스트를 정렬한다.</li>
+                            <li>[string] - 특정 문자를 기준으로 텍스트를 정렬한다.</li>
+                            <li>justify - 워드프로세서의 양쪽 정렬과 같은 정렬 방법</li>
+                            <li>match-parent - 부모 요소의 정렬 방법과 일치</li>
+                            <li>start end - 워드프로세서의 양끝 정렬과 같은 정렬 방법.</li>
+                        </ul>
+
+                        <h1>text-align 속성</h1>
+                        <p class="left4">left - 문단의 내용을 text-align 속성을 사용하여 요소 박스 내에서 왼쪽, 가운데, 오른쪽, 양쪽 정렬 등을 지정할 수 있습니다.</p>
+                        <p class="center4">cemter - 문단의 내용을 text-align 속성을 사용하여 요소 박스 내에서 왼쪽, 가운데, 오른쪽, 양쪽 정렬 등을 지정할 수 있습니다.</p>
+                        <p class="right4">right - 문단의 내용을 text-align 속성을 사용하여 요소 박스 내에서 왼쪽, 가운데, 오른쪽, 양쪽 정렬 등을 지정할 수 있습니다.</p>
+                        <p class="justify4">justify - 문단의 내용을 text-align 속성을 사용하여 요소 박스 내에서 왼쪽, 가운데, 오른쪽, 양쪽 정렬 등을 지정할 수 있습니다.</p>
+                    
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">text-decoration</p>
+                    <p id="des">
+                      
+                        text-decoration은 텍스트를 장식하는 속성으로, CSS3에서 세분화된 하위 속성이 추가되었다.
+
+                        <ul>
+                            <li>text-decoration-line - under-line, over-line, line-trough, blink등의  속성 값을 지정하여 표현</li>
+                            <li>text-decoration-style - 장식선의 모양을 나타내는 속성으로, solid, double, dotted, dashed, wavy의 속성을 지정</li>
+                            <li>text-decoration-color - 장식선의 색상을 CSS 색상 값으로 지정</li>
+                        </ul>
+
+                        
+                        <h1>text-decoration 속성</h1>
+                        <p class="decoration01">
+                            text-decoration 속성을 사용하여 장식선을 표현할 수 있습니다.
+                        </p>
+                        <p class="decoration02">
+                            text-decoration 속성을 사용하여 장식선을 표현할 수 있습니다.
+                        </p>   
+                        
+                    </p>
+                </div><hr>
+                <div class="content">
+                    <p id="menu">text-shadow</p>
+                    <p id="des">
+                      
+                        text-shadow 속성은 3개의 lenght 값과 하나의 색상 값으로 속성 값을 지정한다. 이때 offset-x는 그림자의 가로 방향 거리를 지정하는 값으로,
+                        양수일 경우에는 텍스트의 오른쪽으로, 음수일 경우에는 왼쪽으로 그림자의 위치가 지정된다. offset-y는 그림자의 세로 방향 거리를 의미한다. 세번째 길이 값은 그림자의 흐려짐 정도를
+                        지정하기 위한 blur값이다. 마지막은 그림자의 색상을 지정한다.
+                        4가지 값을 하나의 그룹으로 하되, 콤마(,)로 구분한다.
+                         
+                        <h1>text-shadow 속성</h1>
+                        <p class="shadow01">
+                            TEXT
+                        </p>
+                        <p class="shadow02">
+                            TEXT
+                        </p>
+                        <p class="shadow03">
+                            TEXT
+                        </p>
+                        <p class="shadow04">
+                            TEXT
+                        </p>
+                    
+                    
+                    
+                 
+                    </p>
+                </div><hr>
+            </main>
+        </div>
+        
+
+    </body>
+</html>

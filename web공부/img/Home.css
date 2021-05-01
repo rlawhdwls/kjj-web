@@ -1,0 +1,27 @@
+/* 초기호 */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  background-image: url(img/피치.jpg);
+}
+.header {
+  margin: 0 auto;
+  background: chartreuse;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.content1 {
+  margin: 0 auto;
+  width: 50%;
+}
+.js-clock {
+  background: blanchedalmond;
+  font-size: 3rem;
+  text-align: center;
+}

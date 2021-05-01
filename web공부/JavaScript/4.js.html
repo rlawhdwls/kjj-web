@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+        <ul class="nav-ul">
+            <li><a href="../웹공부.html">HOME</a></li>
+            <li><a href="../HTML목차.html">HTML</a></li>
+            <li><a href="../CSS목차.html">CSS</a></li>
+            <li><a href="../JavaScript.html">JavaScript</a></li>
+            <li><a href="../DataBase.html">DataBase</a></li>
+        </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">실습</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">JS의 타입</p>
+            <div class="ex ex1">
+                <ol>
+                    <li>Number</li>
+                    <li>String</li>
+                    <li>Boolean</li>
+                    <li>Symbol</li>
+                    <li>Undefined</li>
+                    <li>Object</li>
+                </ol>
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">주제2</p>
+            <div class="ex ex2">
+                <code>
+                    var firstNum = 10;     // 소수점을 사용하지 않은 표현<br>
+                    var secondNum = 10.00; // 소수점을 사용한 표현<br>
+                    var thirdNum = 10e6;   // 10000000 <br>
+                    var fourthNum = 10e-6; // 0.00001 <br>
+                </code><br>
+                <code>자바스크립트는 다른 언어와는 달리 정수와 실수를 따로 구분하지 않고,
+                모든 수를 실수 하나로만 표현한다.
+                또한, 매우 큰 수나 매우 작은 수를 표현할 경우에는 e 표기법을 사용할 수 있다.
+                </code>
+                    
+                
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">예외처리</p>
+            <div class="ex ex3">
+                <li>함수 내에 throw{name:"argsMissing" , message:'폭이지정되지 않았습니다.'}
+                <br>를 선언하여  </li>
+
+                
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+
+
+        <input type="submit" class="button" value="버튼">
+        <div class="asdf"></div>
+        <script>
+            function check(){
+                alert('버튼');
+                asdf.textContent +='버튼';
+            }
+            let button1=document.querySelector('.button');
+            let asdf=document.querySelector('.asdf');
+            button1.addEventListener('click',check);
+        </script>
+    </div>
+
+
+
+    <script src="1.js" defer></script>
+</body>
+</html>

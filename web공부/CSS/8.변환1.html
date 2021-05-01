@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>CSS</title>
+    <style>
+        .ex1-1{
+            background:chartreuse;
+            width: 5rem;
+            height: 5rem;
+            transition-property: all;
+        }
+        .ex1-1:hover{
+            
+            width: 30rem;
+            background: rgba(7, 50, 240, 0.8);
+            transition-duration: 3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">Transition</div>
+        <div class="실습_ex" style="display: flex;justify-content: center;">점진적으로 변환하는 기능, 동적인 느낌</div>
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">transition-property</p>
+            <div class="ex ex1">
+                <p>지정된 속성을 변환하고자 할 때 사용하는 속성.</p><br>
+                <p class="ex ex1-1" ></p>
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">주제2</p>
+            <div class="ex ex2">
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">주제3</p>
+            <div class="ex ex3">
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">주제4</p>
+            <div class="ex ex4">
+            </div>
+        </div>
+        <div class="practice practice5">
+            <p class="subject subject5">주제5</p>
+            <div class="ex ex5">
+            </div>
+        </div>
+        <div class="practice practice6">
+            <p class="subject subject6">주제6</p>
+            <div class="ex ex6">
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>

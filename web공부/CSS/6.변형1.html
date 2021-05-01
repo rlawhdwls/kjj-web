@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="../STYLE/CSS파일2.css">
+    <title>CSS</title>
+    <style>
+        img{
+            width: 10rem;
+            height: 10rem;
+        }
+        .trans{
+            width: 10rem;
+            height: 10rem;
+            /* x좌표20rem,y좌표-130 */
+            transform: translate(20rem, -130px);
+        }
+        
+        .scale1{
+            /* x값으로 2배 */
+            transform: scale(2,1);
+        }
+        .rotate1{
+            /* 45도 회전 */
+            transform: rotate(45deg);
+        }
+        .skew1{
+            
+            transform: skew(15deg,-30deg) translate(10rem, 0px);
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="window.location.href='../웹공부.html'" >홈으로</button>     -->
+    <div class="home">
+        <a href="../웹공부.html">Home</a>
+    </div>
+    <div class="header">
+        <div>WEB</div>
+    </div>
+    <ul class="nav-ul">
+        <li><a href="../웹공부.html">HOME</a></li>
+        <li><a href="../HTML목차.html">HTML</a></li>
+        <li><a href="../CSS목차.html">CSS</a></li>
+        <li><a href="../JavaScript.html">JavaScript</a></li>
+        <li><a href="../DataBase.html">DataBase</a></li>
+    </ul>
+    
+    <div class="content">
+        <!-- 실습 헤더 -->
+        <div class="실습">transform</div>
+        
+        <!-- 첫번째 단락 -->
+        <div class="practice practice1">
+            <p class="subject subject1">translate</p>
+            <div class="ex ex1">
+                평면상에서 수평 이동하는 기능.<br>
+                <img src="../img/라이언.gif" alt="" class="trans"> <br><br>
+                <img src="../img/라이언.gif" alt="" class="trans1"><label for="tans1">기본</label>
+            </div>
+        </div>
+        <div class="practice practice2">
+            <p class="subject subject2">scale</p>
+            <div class="ex ex2">
+                크기변형 <br>
+                <img src="../img/라이언.gif" alt="" class="scale1"><br><br>
+                <img src="../img/라이언.gif" alt="" class="scale2"><label for="tans1">기본</label>
+
+            </div>
+        </div>
+        <div class="practice practice3">
+            <p class="subject subject3">rotate</p>
+            <div class="ex ex3">
+                회전<br>
+                <img src="../img/라이언.gif" alt="" class="rotate1"><br><br>
+                <img src="../img/라이언.gif" alt="" class="rotate2"><label for="tans1">기본</label>
+
+            </div>
+        </div>
+        <div class="practice practice4">
+            <p class="subject subject4">skew</p>
+            <div class="ex ex4">
+                기울임 지정<br>
+                x, y좌표가 기울어짐 <br>
+                <img src="../img/라이언.gif" alt="" class='skew1'><br><br>
+                <img src="../img/라이언.gif" alt="" class='skew2'><label for="tans1">기본</label>
+
+            </div>
+        </div>
+        
+
+
+    </div>
+    <script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>

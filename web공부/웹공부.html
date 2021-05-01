@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>웹공부</title>
+        <meta charset="urf-8">
+        <link rel="stylesheet" href="STYLE/CSS파일1.css" >
+       
+    </head>
+
+    <body>
+        <div class="header">
+            WEB
+        </div>
+            <ul class="nav-ul">
+                <li><a href="Home.html">MultiWeb</a></li>
+                <li><a href="HTML목차.html">HTML</a></li>
+                <li><a href="CSS목차.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="DataBase.html">DataBase</a></li>
+                
+            </ul>
+        
+        <div class="content1">
+             
+                <div class="youtube">
+                    <p id="title">생활 코딩 강의</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="youtube">
+                    <p id="title">나동빈 강의</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hke9FKluXow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                </div>
+                <div class="youtube">
+                    <p id="title">공부중인 책</p>
+                    <input  type="image" onclick="window.location.href='https://www.jeumedia.com/shop/webguide/'"  src="img/웹표준핵심가이드북.jpg" width="260" height="400" >
+                </div>
+            
+        </div>
+        <div class="content2">
+
+            <div class="ex1"></div>
+            <div class="ex2"></div>
+            <div class="ex3"></div>
+            <div class="ex4"></div>
+            <input type="button" value="실험" class="실험" onclick="test()">
+        </div>
+        
+
+        <script>
+            let btn = document.querySelector('.실험');
+            function test(){
+                btn.style.transform='scale(2,2)';
+                btn.style.transition-property('all');
+                btn.style.transition-duration('3s');
+
+            }
+        </script>
+    </body>
+</html>
