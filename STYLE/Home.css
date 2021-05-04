@@ -109,7 +109,8 @@ body {
 .js-naming,
 .youjin,
 .js-todo,
-.js-todo-box {
+.js-todo-box,
+.js-pas_box {
   display: none;
 }
 .todo-form {
